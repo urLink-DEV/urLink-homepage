@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 
 export const HeaderSection = styled("header")`
-	padding: 1rem 0;
+	padding: 3rem 0;
 
 	&.fixed {
 		position: fixed;
@@ -11,6 +11,7 @@ export const HeaderSection = styled("header")`
 		background-color: #fff;
 		width: 100%;
 		z-index: 9999;
+		padding: 1rem 0;
 		transition: all 0.3s ease-in-out;
 	}
 
