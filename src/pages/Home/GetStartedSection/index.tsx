@@ -12,6 +12,11 @@ interface GetStartedSectionProps {
 }
 
 const GetStartedSection = ({ t }: GetStartedSectionProps) => {
+	const onClick = () => {
+		window.open(
+			"https://chrome.google.com/webstore/detail/urlink/eimpopfllbjbhgkgomhhpolhlpaapdai?hl=ko"
+		)
+	}
 	return (
 		<Container>
 			<MiddleBlock animation="reveal">
@@ -26,6 +31,7 @@ const GetStartedSection = ({ t }: GetStartedSectionProps) => {
 						fixedWidth="17rem"
 						backgroundColor="#fff"
 						color="#000"
+						onClick={onClick}
 					>
 						{t(Contents.getStartedSection.button)}
 					</Button>

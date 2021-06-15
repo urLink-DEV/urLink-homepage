@@ -13,6 +13,11 @@ interface IntroSectionProps {
 }
 
 const IntroSection = ({ t }: IntroSectionProps) => {
+	const onClick = () => {
+		window.open(
+			"https://chrome.google.com/webstore/detail/urlink/eimpopfllbjbhgkgomhhpolhlpaapdai?hl=ko"
+		)
+	}
 	return (
 		<Container>
 			<MiddleBlock animation="reveal" paddingBottom="0px">
@@ -20,7 +25,7 @@ const IntroSection = ({ t }: IntroSectionProps) => {
 				<p>{t(Contents.introSection.text[0])}</p>
 				<p>{t(Contents.introSection.text[1])}</p>
 				<ButtonWrapper>
-					<Button imgSrc={"logo28.png"} fixedWidth="17rem">
+					<Button imgSrc={"logo28.png"} fixedWidth="17rem" onClick={onClick}>
 						{t(Contents.introSection.button)}
 					</Button>
 				</ButtonWrapper>
