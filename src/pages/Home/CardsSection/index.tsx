@@ -25,7 +25,7 @@ const CardsSection = ({ t }: CardsSectionProps) => {
 		<Container>
 			<MiddleBlock animation="reveal">
 				<Row justify="space-between">
-					<Col lg={13} md={13} sm={12} xs={24}>
+					<Col lg={13} md={13} sm={13} xs={24}>
 						<TitleWrapper>
 							<h2>{t(Contents.cardsSection.title[0])}</h2>
 							<h2>{t(Contents.cardsSection.title[1])}</h2>
@@ -35,18 +35,18 @@ const CardsSection = ({ t }: CardsSectionProps) => {
 							<p>{t(Contents.cardsSection.text[1])}</p>
 						</TextWrapper>
 					</Col>
-					<Col lg={11} md={11} sm={12} xs={24}>
+					<Col lg={11} md={11} sm={11} xs={24}>
 						<PngImg src={"img_cards_2.png"} width="100%" />
 					</Col>
 				</Row>
 				<RowWrapper>
 					<Row justify="space-between">
-						<Col lg={13} md={13} sm={12} xs={24}>
+						<Col lg={13} md={13} sm={13} xs={24}>
 							<ImageWrapper>
 								<PngImg src={"img_cards_3.png"} width="100%" />
 							</ImageWrapper>
 						</Col>
-						<Col lg={9} md={11} sm={12} xs={24}>
+						<Col lg={10} md={10} sm={10} xs={24}>
 							<ButtonImageWrapper>
 								<PngImg src={"img_button_group.png"} width="30%" />
 							</ButtonImageWrapper>

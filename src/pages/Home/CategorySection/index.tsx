@@ -18,10 +18,10 @@ const CategorySection = ({ t }: CategorySectionProps) => {
 		<Container>
 			<MiddleBlock animation="reveal">
 				<Row justify="space-between" align="middle">
-					<Col lg={11} md={11} sm={12} xs={24}>
+					<Col lg={11} md={11} sm={11} xs={24}>
 						<PngImg src={"img_category.png"} width="80%" />
 					</Col>
-					<Col lg={11} md={11} sm={12} xs={24}>
+					<Col lg={12} md={12} sm={12} xs={24}>
 						<TitleWrapper>
 							<h2>{t(Contents.categorySection.title[0])}</h2>
 							<h2>{t(Contents.categorySection.title[1])}</h2>

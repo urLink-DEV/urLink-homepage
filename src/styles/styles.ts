@@ -2,8 +2,7 @@ import { createGlobalStyle } from "styled-components"
 
 export const Styles = createGlobalStyle`
 
-
-@font-face {
+    @font-face {
         font-family: "SpoqaHanSansNeo";
         font-weight: 300;
         src: url("/fonts/SpoqaHanSansNeo-Light.eot"),
@@ -112,10 +111,20 @@ export const Styles = createGlobalStyle`
         -moz-appearance: textfield;
     }
 
+    @media screen and (max-width: 1024px) {
+        html {
+            font-size: 13px;
+        }
+    }
 
     @media screen and (max-width: 768px) {
-	html {
-		font-size: 10px;
-	}
-}
+        html {
+            font-size: 10px;
+        }
+    }
+    @media screen and (max-width: 340px) {
+        html {
+            font-size: 8px;
+        }
+    }
 `

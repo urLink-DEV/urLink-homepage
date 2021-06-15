@@ -10,4 +10,8 @@ export const ContentsWrapper = styled("div")`
 export const ButtonWrapper = styled("div")`
 	margin-top: 2.3rem;
 	margin-bottom: 5rem;
+
+	@media screen and (max-width: 576px) {
+		margin-bottom: 0;
+	}
 `

@@ -15,7 +15,7 @@ export const TextWrapper = styled("div")`
 		color: #2083ff;
 		font-size: 1.15rem;
 		font-weight: 300;
-		margin-top: 1.5rem;
+		margin: 1.5rem 1rem 3rem 0;
 	}
 `
 export const ImageWrapper = styled("div")`
@@ -26,8 +26,8 @@ export const ImageWrapper = styled("div")`
 		z-index: 5;
 		img {
 			position: absolute;
-			top: 3rem;
-			left: -6rem;
+			top: 4rem;
+			left: -2rem;
 		}
 	}
 	div:last-child {

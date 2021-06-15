@@ -9,19 +9,18 @@ export const MiddleBlockSection = styled("section")<any>`
 	> div {
 		width: 100%;
 	}
-	/* justify-content: ${(p) =>
-		p.justifyContent ? p.justifyContent : "center"}; */
 
 	h1 {
 		font-size: 3.5rem;
 		font-weight: 900;
 		margin-bottom: 2rem;
+		line-height: 1.3;
 	}
 	h2 {
 		font-size: 2.8rem;
 		font-weight: 900;
 		margin-bottom: 1.5rem;
-		line-height: 1;
+		line-height: 1.3;
 	}
 	h3 {
 		font-size: 1.25rem;
@@ -29,13 +28,31 @@ export const MiddleBlockSection = styled("section")<any>`
 	}
 	p {
 		font-size: 1.5rem;
+		line-height: 1.5;
 	}
 	button {
 		font-size: 1.625rem;
 		font-weight: 700;
 	}
-	@media screen and (max-width: 1024px) {
-		padding: 5.5rem 0 3rem;
+
+	@media screen and (max-width: 576px) {
+		padding-top: 5rem;
+		padding-bottom: ${(p) => (p.paddingBottom ? p.paddingBottom : "6rem")};
+
+		h1 {
+			font-size: 3rem;
+		}
+		h2 {
+			font-size: 2.2rem;
+			margin-bottom: 1rem;
+		}
+		h3 {
+			font-size: 1.5rem;
+		}
+		p {
+			font-size: 1.7rem;
+			margin-bottom: 1rem;
+		}
 	}
 `
 

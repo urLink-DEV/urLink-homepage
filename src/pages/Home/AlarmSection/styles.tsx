@@ -38,12 +38,20 @@ export const ContentsWrapper = styled("div")<any>`
 		color: #7ca1ff;
 	}
 	h4 {
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 		color: #fff;
 		font-weight: 700;
 		line-height: 1.5;
 		text-align: left;
 		margin-bottom: 1rem;
+	}
+
+	@media screen and (max-width: 576px) {
+		padding: 2rem 2rem 0;
+		h3 {
+			font-size: 1.7rem;
+			text-align: center;
+		}
 	}
 `
 export const RowWrapper = styled("div")`
@@ -57,6 +65,11 @@ export const RowWrapper = styled("div")`
 			margin: auto;
 		}
 	}
+	.ant-col {
+		@media screen and (max-width: 576px) {
+			margin-bottom: 1rem;
+		}
+	}
 `
 
 export const AlarmImageWrapper = styled("div")`
@@ -68,5 +81,9 @@ export const AlarmImageWrapper = styled("div")`
 export const BellImageWrapper = styled("div")`
 	width: 7rem;
 	margin-top: 1rem;
+	@media screen and (max-width: 576px) {
+		width: 4rem;
+		margin: 1rem auto 1rem;
+	}
 `
 export const NotiImageWrapper = styled("div")``

@@ -11,6 +11,9 @@ export const TextWrapper = styled("div")`
 	p {
 		text-align: left;
 	}
+	@media screen and (max-width: 576px) {
+		margin-bottom: 3rem;
+	}
 `
 export const SubTextWrapper = styled("div")`
 	p {

@@ -29,7 +29,7 @@ const AlarmSection = ({ t }: AlarmSectionProps) => {
 				<Col lg={24} md={24} sm={24} xs={24}>
 					<ContentsWrapper backgroundColor="#F8FAFF" padding="4rem 6rem 0">
 						<Row justify="space-between">
-							<Col lg={12} md={12} sm={24} xs={24}>
+							<Col lg={12} md={12} sm={12} xs={24}>
 								<div>
 									<h3>{t(Contents.alarmSection.text[0])}</h3>
 									<h3>{t(Contents.alarmSection.text[1])}</h3>
@@ -39,7 +39,7 @@ const AlarmSection = ({ t }: AlarmSectionProps) => {
 									</BellImageWrapper>
 								</div>
 							</Col>
-							<Col lg={10} md={10} sm={24} xs={24}>
+							<Col lg={10} md={10} sm={10} xs={24}>
 								<AlarmImageWrapper>
 									<PngImg src="img_set_alarm.png" width="100%" />
 								</AlarmImageWrapper>
@@ -49,13 +49,13 @@ const AlarmSection = ({ t }: AlarmSectionProps) => {
 				</Col>
 				<RowWrapper>
 					<Row justify="space-between">
-						<Col lg={12} md={12} sm={24} xs={24}>
+						<Col lg={12} md={12} sm={12} xs={24}>
 							<ContentsWrapper backgroundColor="#5A99F7" padding="2rem 2rem 0">
 								<h4>{t(Contents.alarmSection.text[3])}</h4>
 								<PngImg src="img_notifications.png" width="100%" />
 							</ContentsWrapper>
 						</Col>
-						<Col lg={11} md={11} sm={24} xs={24}>
+						<Col lg={11} md={11} sm={11} xs={24}>
 							<ContentsWrapper backgroundColor="#F8F8F8" padding="2rem 2rem 0">
 								<h4>{t(Contents.alarmSection.text[4])}</h4>
 								<PngImg src="img_alarms.png" width="80%" />

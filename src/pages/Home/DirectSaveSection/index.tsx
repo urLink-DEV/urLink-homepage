@@ -18,7 +18,7 @@ const DirectSaveSection = ({ t }: DirectSaveSectionProps) => {
 		<Container padding="0 60px 0 0">
 			<MiddleBlock animation="reveal" paddingBottom="0px">
 				<Row justify="space-between" align="middle">
-					<Col lg={11} md={11} sm={12} xs={24}>
+					<Col lg={11} md={11} sm={11} xs={24}>
 						<PngImg src={"img_save_on_chrome.png"} width="100%" />
 					</Col>
 					<Col lg={11} md={11} sm={12} xs={24}>

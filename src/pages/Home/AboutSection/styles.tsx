@@ -14,14 +14,16 @@ export const TextWrapper = styled("div")`
 `
 export const FeaturesWrapper = styled("div")`
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
+	padding-top: 3rem;
 `
 export const FeatureWrapper = styled("div")`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 4rem;
+	margin: 1rem;
 `
 
 export const Image = styled("div")<any>`
@@ -32,4 +34,9 @@ export const Image = styled("div")<any>`
 	width: 13.5rem;
 	height: 13.5rem;
 	margin-bottom: 1rem;
+
+	@media screen and (max-width: 768px) {
+		width: 9rem;
+		height: 9rem;
+	}
 `
