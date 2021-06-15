@@ -16,6 +16,13 @@ const ScrollToTop = () => {
 		}
 	}
 
+	const scrollUp = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		})
+	}
+
 	useEffect(() => {
 		window.addEventListener("scroll", checkScrollTop)
 		return () => {
@@ -23,13 +30,6 @@ const ScrollToTop = () => {
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
-
-	const scrollUp = () => {
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth",
-		})
-	}
 
 	return (
 		<ScrollUpContainer onClick={scrollUp} show={showScroll}>
