@@ -61,12 +61,14 @@ export const Styles = createGlobalStyle`
         padding:0;
         border: 0;
         outline: 0;
+    }
+
+    #root {
         background: #fff;
         overflow-x: hidden;
         word-wrap: break-word;
         word-break: keep-all;
     }
-
 
     input,
     textarea {
