@@ -31,13 +31,7 @@ const MiddleBlock = ({
 		return (
 			<MiddleBlockSection paddingBottom={paddingBottom}>
 				<Reveal keyframes={customAnimation}>
-					<Row justify="center" align="middle">
-						<ContentWrapper>
-							<Col lg={24} md={24} sm={24} xs={24}>
-								{children}
-							</Col>
-						</ContentWrapper>
-					</Row>
+					<ContentWrapper>{children}</ContentWrapper>
 				</Reveal>
 			</MiddleBlockSection>
 		)

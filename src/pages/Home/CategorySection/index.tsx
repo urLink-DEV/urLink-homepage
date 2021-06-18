@@ -1,11 +1,11 @@
-import { Row, Col } from "antd"
+import { Col } from "antd"
 
 import MiddleBlock from "../../../components/MiddleBlock"
 import Container from "../../../common/Container"
 import { PngImg } from "../../../common/PngImg"
 
 import Contents from "../../../locales/ko/translation.json"
-import { TitleWrapper, TextWrapper, SubTitleWrapper } from "./styles"
+import { Row, TitleWrapper, TextWrapper, SubTitleWrapper } from "./styles"
 
 import { withTranslation } from "react-i18next"
 
@@ -17,7 +17,7 @@ const CategorySection = ({ t }: CategorySectionProps) => {
 	return (
 		<Container>
 			<MiddleBlock animation="reveal">
-				<Row justify="space-between" align="middle">
+				<Row>
 					<Col lg={11} md={11} sm={11} xs={24}>
 						<PngImg src={"img_category.png"} width="80%" />
 					</Col>
