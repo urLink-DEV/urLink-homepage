@@ -10,6 +10,7 @@ import {
 	TextWrapper,
 	SubTextWrapper,
 	ImageWrapper,
+	CardsImageWrapper,
 	ButtonImageWrapper,
 	RowWrapper,
 } from "./styles"
@@ -36,7 +37,10 @@ const CardsSection = ({ t }: CardsSectionProps) => {
 						</TextWrapper>
 					</Col>
 					<Col lg={11} md={11} sm={11} xs={24}>
-						<PngImg src={"img_cards_2.png"} width="100%" />
+						<CardsImageWrapper>
+							<PngImg src={"img_cards_2.png"} width="100%" />
+							<PngImg src={"img_m_cards.png"} width="100%" />
+						</CardsImageWrapper>
 					</Col>
 				</Row>
 				<RowWrapper>

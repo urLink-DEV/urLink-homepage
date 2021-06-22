@@ -1,4 +1,3 @@
-import { Row, Col } from "antd"
 import { withTranslation } from "react-i18next"
 import Reveal from "react-awesome-reveal"
 import { keyframes } from "@emotion/react"

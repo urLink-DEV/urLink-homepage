@@ -14,7 +14,7 @@ export const StyledButton = styled("button")<any>`
 	padding: ${(p) => (p.type === "small" ? "0.7rem 1.5rem" : "1.2rem 1.5rem")};
 	cursor: pointer;
 	margin: auto;
-	margin-top: 0.625rem;
+	margin-top: ${(p) => (p.type === "small" ? 0 : "0.625rem")};
 	border: none;
 	transition: all 0.3s ease-in-out;
 

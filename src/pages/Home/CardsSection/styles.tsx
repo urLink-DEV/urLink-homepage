@@ -22,6 +22,21 @@ export const SubTextWrapper = styled("div")`
 		line-height: 2;
 	}
 `
+export const CardsImageWrapper = styled("div")`
+	img:last-child {
+		display: none;
+	}
+	@media screen and (max-width: 576px) {
+		margin-left: -40px;
+		margin-right: -40px;
+		img:first-child {
+			display: none;
+		}
+		img:last-child {
+			display: block;
+		}
+	}
+`
 export const ButtonImageWrapper = styled("div")`
 	text-align: left;
 	margin-bottom: 1rem;
@@ -33,4 +48,7 @@ export const ImageWrapper = styled("div")`
 
 export const RowWrapper = styled("div")`
 	margin-top: 3rem;
+	@media screen and (max-width: 576px) {
+		display: none;
+	}
 `

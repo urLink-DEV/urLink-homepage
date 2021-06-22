@@ -19,7 +19,7 @@ export const MiddleBlockSection = styled("section")<any>`
 	h2 {
 		font-size: 2.8rem;
 		font-weight: 900;
-		margin-bottom: 1.5rem;
+		margin-bottom: 1rem;
 		line-height: 1.3;
 	}
 	h3 {
@@ -50,8 +50,7 @@ export const MiddleBlockSection = styled("section")<any>`
 			font-size: 1.5rem;
 		}
 		p {
-			font-size: 1.7rem;
-			margin-bottom: 1rem;
+			margin-bottom: 0.3rem;
 		}
 	}
 `
