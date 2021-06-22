@@ -26,11 +26,10 @@ export const FeatureWrapper = styled("div")`
 	margin: 1rem;
 `
 
-export const Image = styled("div")<any>`
-	background-image: url(${(p) => `/img/png/${p.src}`});
-	background-position: center;
-	background-size: cover;
-	border-radius: 50%;
+export const ImageWrapper = styled("div")`
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
 	width: 13.5rem;
 	height: 13.5rem;
 	margin-bottom: 1rem;

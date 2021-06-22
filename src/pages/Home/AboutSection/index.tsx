@@ -25,17 +25,17 @@ const AboutSection = ({ t }: AboutSectionProps) => {
 				</TextWrapper>
 				<FeaturesWrapper>
 					<Feature
-						img="icon_bell.png"
+						img="img_about_1.png"
 						topText={t(Contents.aboutSection.subText[0])}
 						bottomText={t(Contents.aboutSection.subText[1])}
 					></Feature>
 					<Feature
-						img="icon_bell.png"
+						img="img_about_2.png"
 						topText={t(Contents.aboutSection.subText[2])}
 						bottomText={t(Contents.aboutSection.subText[3])}
 					></Feature>
 					<Feature
-						img="icon_bell.png"
+						img="img_about_3.png"
 						topText={t(Contents.aboutSection.subText[4])}
 						bottomText={t(Contents.aboutSection.subText[5])}
 					></Feature>
