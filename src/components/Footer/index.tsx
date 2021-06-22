@@ -3,7 +3,7 @@ import { PngImg } from "../../common/PngImg"
 import Container from "../../common/Container"
 import Contents from "../../locales/ko/translation.json"
 
-// import i18n from "i18next"
+import i18n from "i18next"
 import {
 	FooterSection,
 	SideCotentsWrapper,
@@ -12,9 +12,9 @@ import {
 } from "./styles"
 
 const Footer = ({ t }: any) => {
-	// const handleChange = (language: string) => {
-	// 	i18n.changeLanguage(language)
-	// }
+	const handleChange = (language: string) => {
+		i18n.changeLanguage(language)
+	}
 
 	return (
 		<>
@@ -43,14 +43,18 @@ const Footer = ({ t }: any) => {
 						</RightSide>
 					</SideCotentsWrapper>
 
-					{/* <LanguageSwitch onClick={() => handleChange("en")}>
-							<SvgIcon
-								src="united-states.svg"
-								aria-label="homepage"
-								width="30px"
-								height="30px"
-							/>
-						</LanguageSwitch> */}
+					<button
+						style={{ color: "red", margin: 10 }}
+						onClick={() => handleChange("en")}
+					>
+						en
+					</button>
+					<button
+						style={{ color: "blue", margin: 10 }}
+						onClick={() => handleChange("ko")}
+					>
+						kr
+					</button>
 				</Container>
 			</FooterSection>
 		</>

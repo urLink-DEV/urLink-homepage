@@ -20,18 +20,45 @@ export const HeaderSection = styled("header")`
 		text-align: center;
 	}
 `
-
 export const LogoContainer = styled(Link)`
 	display: flex;
+	@media screen and (max-width: 375px) {
+		img {
+			width: 70px;
+		}
+	}
 `
-
 export const NavLink = styled("div")`
 	display: inline-block;
 	text-align: center;
 `
-export const ButtonWrapper = styled("div")`
+export const ButtonGroup = styled("div")`
+	display: flex;
+`
+export const GetStartedButton = styled("div")`
 	display: none;
 	&.show {
 		display: block;
+	}
+`
+export const ChangeLanguageButton = styled("div")<any>`
+	margin-left: 1rem;
+	button {
+		font-size: 1rem;
+		padding: 0.7rem 0.5rem;
+		color: #2083ff;
+	}
+	button:first-child {
+		padding-right: 0;
+		font-weight: ${(p) => (p.currentLanguage === "ko" ? 900 : 300)};
+	}
+	button:first-child::after {
+		content: "|";
+		color: #2083ff;
+		font-weight: 300;
+		margin-left: 0.5rem;
+	}
+	button:last-child {
+		font-weight: ${(p) => (p.currentLanguage === "en" ? 900 : 300)};
 	}
 `
