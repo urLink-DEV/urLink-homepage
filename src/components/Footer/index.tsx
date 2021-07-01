@@ -42,19 +42,6 @@ const Footer = ({ t }: any) => {
 							</a>
 						</RightSide>
 					</SideCotentsWrapper>
-
-					<button
-						style={{ color: "red", margin: 10 }}
-						onClick={() => handleChange("en")}
-					>
-						en
-					</button>
-					<button
-						style={{ color: "blue", margin: 10 }}
-						onClick={() => handleChange("ko")}
-					>
-						kr
-					</button>
 				</Container>
 			</FooterSection>
 		</>
