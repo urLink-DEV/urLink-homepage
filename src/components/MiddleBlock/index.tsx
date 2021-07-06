@@ -15,7 +15,7 @@ const customAnimation = keyframes`
     transform: translateY(0);
   }
 `
-interface IProps {
+export interface IProps {
 	animation?: string
 	paddingBottom?: string
 	children: React.ReactNode

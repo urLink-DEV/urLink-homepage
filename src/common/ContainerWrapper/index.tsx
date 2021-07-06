@@ -1,6 +1,6 @@
 import { StyledContainerWrapper } from "./styles"
 
-interface IProps {
+export interface IProps {
 	backgroundColor?: string
 }
 

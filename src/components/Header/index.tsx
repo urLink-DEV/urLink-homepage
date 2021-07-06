@@ -16,7 +16,11 @@ import {
 import { getScroll } from "../../common/utils/getWindow"
 import Contents from "../../locales/ko/translation.json"
 
-const Header = ({ t }: any) => {
+interface IProps {
+	t: any
+}
+
+const Header: React.FC<IProps> = ({ t }) => {
 	const [fixHeader, setFixHeader] = useState(false)
 	const [currentLanguage, setCurrentLanguage] = useState("ko")
 
@@ -70,7 +74,7 @@ const Header = ({ t }: any) => {
 								show: Boolean(fixHeader),
 							})}
 						>
-							<Button type="small" onClick={onClick}>
+							<Button size="small" onClick={onClick}>
 								{t(Contents.getStartedSection.button)}
 							</Button>
 						</GetStartedButton>

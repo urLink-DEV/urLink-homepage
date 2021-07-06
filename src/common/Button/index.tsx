@@ -1,8 +1,8 @@
 import { StyledButton } from "./styles"
 import { PngImg } from "../PngImg"
 
-interface IProps {
-	type?: string
+export interface IProps {
+	size?: string
 	color?: string
 	backgroundColor?: string
 	borderRadius?: string
@@ -13,7 +13,7 @@ interface IProps {
 }
 
 export const Button: React.FC<IProps> = ({
-	type,
+	size,
 	color,
 	backgroundColor,
 	borderRadius,
@@ -23,7 +23,7 @@ export const Button: React.FC<IProps> = ({
 	children,
 }) => (
 	<StyledButton
-		type={type}
+		size={size}
 		color={color}
 		backgroundColor={backgroundColor}
 		borderRadius={borderRadius}

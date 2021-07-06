@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { IProps } from "../Container"
 
-export const StyledContainer = styled("div")<any>`
+export const StyledContainer = styled("div")<IProps>`
 	position: relative;
 	width: 100%;
 	max-width: 1440px;

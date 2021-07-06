@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { IProps } from "../MiddleBlock"
 
-export const MiddleBlockSection = styled("section")<any>`
+export const MiddleBlockSection = styled("section")<IProps>`
 	position: relative;
 	padding-top: 7rem;
 	padding-bottom: ${(p) => (p.paddingBottom ? p.paddingBottom : "7rem")};

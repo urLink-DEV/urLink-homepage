@@ -1,6 +1,6 @@
 import { StyledContainer } from "./styles"
 
-interface IProps {
+export interface IProps {
 	padding?: string
 }
 

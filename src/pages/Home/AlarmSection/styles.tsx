@@ -1,5 +1,10 @@
 import styled from "styled-components"
 
+interface contentsWrapperIProps {
+	backgroundColor?: string
+	padding?: string
+}
+
 export const TitleWrapper = styled("div")`
 	margin-bottom: 5rem;
 
@@ -19,7 +24,7 @@ export const SubTextWrapper = styled("div")`
 		line-height: 2;
 	}
 `
-export const ContentsWrapper = styled("div")<any>`
+export const ContentsWrapper = styled("div")<contentsWrapperIProps>`
 	padding: ${(p) => (p.padding ? p.padding : 0)};
 	background-color: ${(p) => (p.backgroundColor ? p.backgroundColor : "#fff")};
 	border-radius: 16px;

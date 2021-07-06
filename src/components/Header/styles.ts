@@ -1,6 +1,10 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 
+interface currentLanguageIProps {
+	currentLanguage: string
+}
+
 export const HeaderSection = styled("header")`
 	padding: 3rem 0;
 
@@ -41,7 +45,7 @@ export const GetStartedButton = styled("div")`
 		display: block;
 	}
 `
-export const ChangeLanguageButton = styled("div")<any>`
+export const ChangeLanguageButton = styled("div")<currentLanguageIProps>`
 	margin-left: 1rem;
 	button {
 		font-size: 1rem;

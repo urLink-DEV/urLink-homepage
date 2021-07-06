@@ -1,6 +1,9 @@
 import styled from "styled-components"
+interface IProps {
+	show?: boolean
+}
 
-export const ScrollUpContainer = styled("div")<any>`
+export const ScrollUpContainer = styled("div")<IProps>`
 	padding: 10px;
 	position: fixed;
 	right: 10px;
