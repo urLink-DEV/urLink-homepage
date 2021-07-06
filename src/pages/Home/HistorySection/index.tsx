@@ -23,11 +23,11 @@ const moveLinkAnimation = keyframes`
   }
 `
 
-interface HistorySectionProps {
+interface IProps {
 	t: any
 }
 
-const HistorySection = ({ t }: HistorySectionProps) => {
+const HistorySection: React.FC<IProps> = ({ t }) => {
 	return (
 		<Container padding="0 0 0 60px">
 			<MiddleBlock>

@@ -15,17 +15,17 @@ const customAnimation = keyframes`
     transform: translateY(0);
   }
 `
-interface MiddleBlockProps {
+interface IProps {
 	animation?: string
 	paddingBottom?: string
 	children: React.ReactNode
 }
 
-const MiddleBlock = ({
+const MiddleBlock: React.FC<IProps> = ({
 	animation,
 	paddingBottom,
 	children,
-}: MiddleBlockProps) => {
+}) => {
 	if (animation === "reveal") {
 		return (
 			<MiddleBlockSection paddingBottom={paddingBottom}>

@@ -9,11 +9,11 @@ import { Row, TitleWrapper, TextWrapper, SubTitleWrapper } from "./styles"
 
 import { withTranslation } from "react-i18next"
 
-interface CategorySectionProps {
+interface IProps {
 	t: any
 }
 
-const CategorySection = ({ t }: CategorySectionProps) => {
+const CategorySection: React.FC<IProps> = ({ t }) => {
 	return (
 		<Container>
 			<MiddleBlock animation="reveal">

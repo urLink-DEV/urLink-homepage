@@ -9,11 +9,11 @@ import { Row, TitleWrapper, TextWrapper } from "./styles"
 
 import { withTranslation } from "react-i18next"
 
-interface DirectSaveSectionProps {
+interface IProps {
 	t: any
 }
 
-const DirectSaveSection = ({ t }: DirectSaveSectionProps) => {
+const DirectSaveSection: React.FC<IProps> = ({ t }) => {
 	return (
 		<Container padding="0 60px 0 0">
 			<MiddleBlock animation="reveal" paddingBottom="0px">

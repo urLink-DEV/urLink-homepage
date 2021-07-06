@@ -7,11 +7,11 @@ import { TitleWrapper, TextWrapper, FeaturesWrapper } from "./styles"
 
 import { withTranslation } from "react-i18next"
 
-interface AboutSectionProps {
+interface IProps {
 	t: any
 }
 
-const AboutSection = ({ t }: AboutSectionProps) => {
+const AboutSection: React.FC<IProps> = ({ t }) => {
 	return (
 		<Container>
 			<MiddleBlock animation="reveal">

@@ -1,10 +1,10 @@
 import { StyledContainerWrapper } from "./styles"
-import { ContainerWrapperProps } from "../types"
 
-const ContainerWrapper = ({
-	backgroundColor,
-	children,
-}: ContainerWrapperProps) => (
+interface IProps {
+	backgroundColor?: string
+}
+
+const ContainerWrapper: React.FC<IProps> = ({ backgroundColor, children }) => (
 	<StyledContainerWrapper backgroundColor={backgroundColor}>
 		{children}
 	</StyledContainerWrapper>

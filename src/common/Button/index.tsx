@@ -1,17 +1,27 @@
 import { StyledButton } from "./styles"
-import { ButtonProps } from "../types"
 import { PngImg } from "../PngImg"
 
-export const Button = ({
+interface IProps {
+	type?: string
+	color?: string
+	backgroundColor?: string
+	borderRadius?: string
+	fixedWidth?: string
+	name?: string
+	imgSrc?: string
+	onClick?: () => void
+}
+
+export const Button: React.FC<IProps> = ({
 	type,
 	color,
 	backgroundColor,
-	fixedWidth,
-	children,
 	borderRadius,
-	imgSrc,
+	fixedWidth,
 	onClick,
-}: ButtonProps) => (
+	imgSrc,
+	children,
+}) => (
 	<StyledButton
 		type={type}
 		color={color}

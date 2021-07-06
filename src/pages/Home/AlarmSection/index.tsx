@@ -14,11 +14,11 @@ import {
 
 import { withTranslation } from "react-i18next"
 
-interface AlarmSectionProps {
+interface IProps {
 	t: any
 }
 
-const AlarmSection = ({ t }: AlarmSectionProps) => {
+const AlarmSection: React.FC<IProps> = ({ t }) => {
 	return (
 		<Container>
 			<MiddleBlock animation="reveal">

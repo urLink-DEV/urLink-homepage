@@ -1,7 +1,10 @@
 import { StyledContainer } from "./styles"
-import { ContainerProps } from "../types"
 
-const Container = ({ padding, children }: ContainerProps) => (
+interface IProps {
+	padding?: string
+}
+
+const Container: React.FC<IProps> = ({ padding, children }) => (
 	<StyledContainer padding={padding}>{children}</StyledContainer>
 )
 

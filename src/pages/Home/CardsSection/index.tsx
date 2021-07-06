@@ -17,11 +17,11 @@ import {
 
 import { withTranslation } from "react-i18next"
 
-interface CardsSectionProps {
+interface IProps {
 	t: any
 }
 
-const CardsSection = ({ t }: CardsSectionProps) => {
+const CardsSection: React.FC<IProps> = ({ t }) => {
 	return (
 		<Container>
 			<MiddleBlock animation="reveal">

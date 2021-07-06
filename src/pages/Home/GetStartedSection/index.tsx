@@ -7,11 +7,11 @@ import { ContentsWrapper, ButtonWrapper } from "./styles"
 
 import { withTranslation } from "react-i18next"
 
-interface GetStartedSectionProps {
+interface IProps {
 	t: any
 }
 
-const GetStartedSection = ({ t }: GetStartedSectionProps) => {
+const GetStartedSection: React.FC<IProps> = ({ t }) => {
 	const onClick = () => {
 		window.open(
 			"https://chrome.google.com/webstore/detail/urlink/eimpopfllbjbhgkgomhhpolhlpaapdai?hl=ko"

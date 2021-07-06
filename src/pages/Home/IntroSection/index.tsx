@@ -8,11 +8,11 @@ import { ButtonWrapper } from "./styles"
 
 import { withTranslation } from "react-i18next"
 
-interface IntroSectionProps {
+interface IProps {
 	t: any
 }
 
-const IntroSection = ({ t }: IntroSectionProps) => {
+const IntroSection: React.FC<IProps> = ({ t }) => {
 	const onClick = () => {
 		window.open(
 			"https://chrome.google.com/webstore/detail/urlink/eimpopfllbjbhgkgomhhpolhlpaapdai?hl=ko"

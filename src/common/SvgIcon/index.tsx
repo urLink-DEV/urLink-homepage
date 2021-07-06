@@ -1,5 +1,9 @@
-import { SvgIconProps } from "../types";
+interface IProps {
+	src: string
+	width: string
+	height: string
+}
 
-export const SvgIcon = ({ src, width, height }: SvgIconProps) => (
-  <img src={`/img/svg/${src}`} alt={src} width={width} height={height} />
-);
+export const SvgIcon: React.FC<IProps> = ({ src, width, height }) => (
+	<img src={`/img/svg/${src}`} alt={src} width={width} height={height} />
+)
