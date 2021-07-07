@@ -1,24 +1,11 @@
-import { withTranslation } from "react-i18next"
+import { withTranslation, WithTranslation } from "react-i18next"
 import Reveal from "react-awesome-reveal"
-import { keyframes } from "@emotion/react"
 
-import { MiddleBlockSection, ContentWrapper } from "./styles"
+import { MiddleBlockSection, ContentWrapper, CustomAnimation } from "./styles"
 
-const customAnimation = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(8rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`
-export interface IProps {
+export interface IProps extends WithTranslation {
 	animation?: string
 	paddingBottom?: string
-	children: React.ReactNode
 }
 
 const MiddleBlock: React.FC<IProps> = ({
@@ -29,7 +16,7 @@ const MiddleBlock: React.FC<IProps> = ({
 	if (animation === "reveal") {
 		return (
 			<MiddleBlockSection paddingBottom={paddingBottom}>
-				<Reveal keyframes={customAnimation}>
+				<Reveal keyframes={CustomAnimation}>
 					<ContentWrapper>{children}</ContentWrapper>
 				</Reveal>
 			</MiddleBlockSection>

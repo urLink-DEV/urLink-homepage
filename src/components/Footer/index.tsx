@@ -1,9 +1,8 @@
-import { withTranslation } from "react-i18next"
+import { withTranslation, WithTranslation } from "react-i18next"
 import { PngImg } from "../../common/PngImg"
 import Container from "../../common/Container"
 import Contents from "../../locales/ko/translation.json"
 
-import i18n from "i18next"
 import {
 	FooterSection,
 	SideCotentsWrapper,
@@ -11,24 +10,20 @@ import {
 	RightSide,
 } from "./styles"
 
-const Footer = ({ t }: any) => {
-	const handleChange = (language: string) => {
-		i18n.changeLanguage(language)
-	}
-
+const Footer: React.FC<WithTranslation> = ({ t: translate }) => {
 	return (
 		<>
 			<FooterSection>
 				<Container>
 					<SideCotentsWrapper>
 						<LeftSide>
-							<span>{t(Contents.footerSection.text[0])}</span>
+							<span>{translate(Contents.footerSection.text[0])}</span>
 							<a
 								href="https://www.notion.so/vvidstudio/858782886bc643da8831688192c642a9"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								{t(Contents.footerSection.text[1])}
+								{translate(Contents.footerSection.text[1])}
 							</a>
 						</LeftSide>
 

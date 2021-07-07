@@ -1,9 +1,9 @@
 import { FeatureWrapper, ImageWrapper } from "./styles"
 import { PngImg } from "../../../common/PngImg"
 interface IProps {
-	img: string
-	topText: any
-	bottomText: any
+	img: string;
+	topText: string;
+	bottomText: string;
 }
 
 const Feature: React.FC<IProps> = ({ img, topText, bottomText }) => {

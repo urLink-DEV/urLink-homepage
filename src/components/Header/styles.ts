@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 
 interface currentLanguageIProps {
-	currentLanguage: string
+	currentLanguage: string;
 }
 
 export const HeaderSection = styled("header")`
@@ -24,7 +24,7 @@ export const HeaderSection = styled("header")`
 		text-align: center;
 	}
 `
-export const LogoContainer = styled(Link)`
+export const LogoLink = styled(Link)`
 	display: flex;
 	@media screen and (max-width: 375px) {
 		img {
@@ -32,10 +32,7 @@ export const LogoContainer = styled(Link)`
 		}
 	}
 `
-export const NavLink = styled("div")`
-	display: inline-block;
-	text-align: center;
-`
+
 export const ButtonGroup = styled("div")`
 	display: flex;
 `

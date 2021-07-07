@@ -5,13 +5,9 @@ import { Button } from "../../../common/Button"
 import Contents from "../../../locales/ko/translation.json"
 import { ContentsWrapper, ButtonWrapper } from "./styles"
 
-import { withTranslation } from "react-i18next"
+import { withTranslation, WithTranslation } from "react-i18next"
 
-interface IProps {
-	t: any
-}
-
-const GetStartedSection: React.FC<IProps> = ({ t }) => {
+const GetStartedSection: React.FC<WithTranslation> = ({ t: translate }) => {
 	const onClick = () => {
 		window.open(
 			"https://chrome.google.com/webstore/detail/urlink/eimpopfllbjbhgkgomhhpolhlpaapdai?hl=ko"
@@ -21,9 +17,9 @@ const GetStartedSection: React.FC<IProps> = ({ t }) => {
 		<Container>
 			<MiddleBlock animation="reveal">
 				<ContentsWrapper>
-					<h1>{t(Contents.getStartedSection.title)}</h1>
-					<p>{t(Contents.getStartedSection.text[0])}</p>
-					<p>{t(Contents.getStartedSection.text[1])}</p>
+					<h1>{translate(Contents.getStartedSection.title)}</h1>
+					<p>{translate(Contents.getStartedSection.text[0])}</p>
+					<p>{translate(Contents.getStartedSection.text[1])}</p>
 				</ContentsWrapper>
 				<ButtonWrapper>
 					<Button
@@ -33,7 +29,7 @@ const GetStartedSection: React.FC<IProps> = ({ t }) => {
 						color="#000"
 						onClick={onClick}
 					>
-						{t(Contents.getStartedSection.button)}
+						{translate(Contents.getStartedSection.button)}
 					</Button>
 				</ButtonWrapper>
 			</MiddleBlock>

@@ -6,13 +6,9 @@ import { PngImg } from "../../../common/PngImg"
 import Contents from "../../../locales/ko/translation.json"
 import { ButtonWrapper } from "./styles"
 
-import { withTranslation } from "react-i18next"
+import { withTranslation, WithTranslation } from "react-i18next"
 
-interface IProps {
-	t: any
-}
-
-const IntroSection: React.FC<IProps> = ({ t }) => {
+const IntroSection: React.FC<WithTranslation> = ({ t: translate }) => {
 	const onClick = () => {
 		window.open(
 			"https://chrome.google.com/webstore/detail/urlink/eimpopfllbjbhgkgomhhpolhlpaapdai?hl=ko"
@@ -21,12 +17,12 @@ const IntroSection: React.FC<IProps> = ({ t }) => {
 	return (
 		<Container>
 			<MiddleBlock animation="reveal" paddingBottom="0px">
-				<h1>{t(Contents.introSection.title)}</h1>
-				<p>{t(Contents.introSection.text[0])}</p>
-				<p>{t(Contents.introSection.text[1])}</p>
+				<h1>{translate(Contents.introSection.title)}</h1>
+				<p>{translate(Contents.introSection.text[0])}</p>
+				<p>{translate(Contents.introSection.text[1])}</p>
 				<ButtonWrapper>
 					<Button imgSrc={"logo28.png"} fixedWidth="17rem" onClick={onClick}>
-						{t(Contents.introSection.button)}
+						{translate(Contents.introSection.button)}
 					</Button>
 				</ButtonWrapper>
 				<PngImg src={"mockup_desktop.png"} width={"100%"} />

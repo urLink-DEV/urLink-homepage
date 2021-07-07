@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react"
 import { Row } from "antd"
 import clsx from "clsx"
-import { withTranslation } from "react-i18next"
+import { withTranslation, WithTranslation } from "react-i18next"
 import i18n from "i18next"
 import Container from "../../common/Container"
 import { Button } from "../../common/Button"
 import { PngImg } from "../../common/PngImg"
 import {
 	HeaderSection,
-	LogoContainer,
+	LogoLink,
 	GetStartedButton,
 	ChangeLanguageButton,
 	ButtonGroup,
@@ -16,11 +16,7 @@ import {
 import { getScroll } from "../../common/utils/getWindow"
 import Contents from "../../locales/ko/translation.json"
 
-interface IProps {
-	t: any
-}
-
-const Header: React.FC<IProps> = ({ t }) => {
+const Header: React.FC<WithTranslation> = ({ t: translate }) => {
 	const [fixHeader, setFixHeader] = useState(false)
 	const [currentLanguage, setCurrentLanguage] = useState("ko")
 
@@ -41,11 +37,7 @@ const Header: React.FC<IProps> = ({ t }) => {
 	}
 
 	const handleChange = (language: string) => {
-		if (language === "ko") {
-			setCurrentLanguage("ko")
-		} else {
-			setCurrentLanguage("en")
-		}
+		setCurrentLanguage(language)
 		i18n.changeLanguage(language)
 	}
 
@@ -54,28 +46,28 @@ const Header: React.FC<IProps> = ({ t }) => {
 		return () => {
 			window.removeEventListener("scroll", checkScrollTop)
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line
 	}, [])
 
 	return (
 		<HeaderSection
 			className={clsx({
-				fixed: Boolean(fixHeader),
+				fixed: fixHeader,
 			})}
 		>
 			<Container>
 				<Row justify="space-between">
-					<LogoContainer to="/" aria-label="homepage">
+					<LogoLink to="/" aria-label="homepage">
 						<PngImg src="logo_full.png" width="108px" />
-					</LogoContainer>
+					</LogoLink>
 					<ButtonGroup>
 						<GetStartedButton
 							className={clsx({
-								show: Boolean(fixHeader),
+								show: fixHeader,
 							})}
 						>
 							<Button size="small" onClick={onClick}>
-								{t(Contents.getStartedSection.button)}
+								{translate(Contents.getStartedSection.button)}
 							</Button>
 						</GetStartedButton>
 						<ChangeLanguageButton currentLanguage={currentLanguage}>

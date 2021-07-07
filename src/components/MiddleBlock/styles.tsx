@@ -1,7 +1,11 @@
 import styled from "styled-components"
-import { IProps } from "../MiddleBlock"
+import { keyframes } from "@emotion/react"
 
-export const MiddleBlockSection = styled("section")<IProps>`
+interface MiddleBlockSectionProps {
+	paddingBottom?: string
+}
+
+export const MiddleBlockSection = styled("section")<MiddleBlockSectionProps>`
 	position: relative;
 	padding-top: 7rem;
 	padding-bottom: ${(p) => (p.paddingBottom ? p.paddingBottom : "7rem")};
@@ -59,4 +63,16 @@ export const MiddleBlockSection = styled("section")<IProps>`
 export const ContentWrapper = styled("div")`
 	text-align: center;
 	width: 100%;
+`
+
+export const CustomAnimation = keyframes`
+from {
+	opacity: 0;
+	transform: translateY(8rem);
+}
+
+to {
+	opacity: 1;
+	transform: translateY(0);
+}
 `

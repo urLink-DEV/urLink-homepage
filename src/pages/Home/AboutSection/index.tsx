@@ -5,39 +5,35 @@ import Feature from "./Feature"
 import Contents from "../../../locales/ko/translation.json"
 import { TitleWrapper, TextWrapper, FeaturesWrapper } from "./styles"
 
-import { withTranslation } from "react-i18next"
+import { withTranslation, WithTranslation } from "react-i18next"
 
-interface IProps {
-	t: any
-}
-
-const AboutSection: React.FC<IProps> = ({ t }) => {
+const AboutSection: React.FC<WithTranslation> = ({ t: translate }) => {
 	return (
 		<Container>
 			<MiddleBlock animation="reveal">
 				<TitleWrapper>
-					<h2>{t(Contents.aboutSection.title[0])}</h2>
-					<h2>{t(Contents.aboutSection.title[1])}</h2>
+					<h2>{translate(Contents.aboutSection.title[0])}</h2>
+					<h2>{translate(Contents.aboutSection.title[1])}</h2>
 				</TitleWrapper>
 				<TextWrapper>
-					<p>{t(Contents.aboutSection.text[0])}</p>
-					<p>{t(Contents.aboutSection.text[1])}</p>
+					<p>{translate(Contents.aboutSection.text[0])}</p>
+					<p>{translate(Contents.aboutSection.text[1])}</p>
 				</TextWrapper>
 				<FeaturesWrapper>
 					<Feature
 						img="img_about_1.png"
-						topText={t(Contents.aboutSection.subText[0])}
-						bottomText={t(Contents.aboutSection.subText[1])}
+						topText={translate(Contents.aboutSection.subText[0])}
+						bottomText={translate(Contents.aboutSection.subText[1])}
 					></Feature>
 					<Feature
 						img="img_about_2.png"
-						topText={t(Contents.aboutSection.subText[2])}
-						bottomText={t(Contents.aboutSection.subText[3])}
+						topText={translate(Contents.aboutSection.subText[2])}
+						bottomText={translate(Contents.aboutSection.subText[3])}
 					></Feature>
 					<Feature
 						img="img_about_3.png"
-						topText={t(Contents.aboutSection.subText[4])}
-						bottomText={t(Contents.aboutSection.subText[5])}
+						topText={translate(Contents.aboutSection.subText[4])}
+						bottomText={translate(Contents.aboutSection.subText[5])}
 					></Feature>
 				</FeaturesWrapper>
 			</MiddleBlock>

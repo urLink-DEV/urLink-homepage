@@ -15,25 +15,21 @@ import {
 	RowWrapper,
 } from "./styles"
 
-import { withTranslation } from "react-i18next"
+import { withTranslation, WithTranslation } from "react-i18next"
 
-interface IProps {
-	t: any
-}
-
-const CardsSection: React.FC<IProps> = ({ t }) => {
+const CardsSection: React.FC<WithTranslation> = ({ t: translate }) => {
 	return (
 		<Container>
 			<MiddleBlock animation="reveal">
 				<Row justify="space-between">
 					<Col lg={13} md={13} sm={13} xs={24}>
 						<TitleWrapper>
-							<h2>{t(Contents.cardsSection.title[0])}</h2>
-							<h2>{t(Contents.cardsSection.title[1])}</h2>
+							<h2>{translate(Contents.cardsSection.title[0])}</h2>
+							<h2>{translate(Contents.cardsSection.title[1])}</h2>
 						</TitleWrapper>
 						<TextWrapper>
-							<p>{t(Contents.cardsSection.text[0])}</p>
-							<p>{t(Contents.cardsSection.text[1])}</p>
+							<p>{translate(Contents.cardsSection.text[0])}</p>
+							<p>{translate(Contents.cardsSection.text[1])}</p>
 						</TextWrapper>
 					</Col>
 					<Col lg={11} md={11} sm={11} xs={24}>
@@ -55,9 +51,9 @@ const CardsSection: React.FC<IProps> = ({ t }) => {
 								<PngImg src={"img_button_group.png"} width="30%" />
 							</ButtonImageWrapper>
 							<SubTextWrapper>
-								<p>{t(Contents.cardsSection.subText[0])}</p>
-								<p>{t(Contents.cardsSection.subText[1])}</p>
-								<p>{t(Contents.cardsSection.subText[2])}</p>
+								<p>{translate(Contents.cardsSection.subText[0])}</p>
+								<p>{translate(Contents.cardsSection.subText[1])}</p>
+								<p>{translate(Contents.cardsSection.subText[2])}</p>
 							</SubTextWrapper>
 						</Col>
 					</Row>

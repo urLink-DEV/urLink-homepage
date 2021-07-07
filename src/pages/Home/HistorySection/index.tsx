@@ -9,7 +9,7 @@ import { PngImg } from "../../../common/PngImg"
 import Contents from "../../../locales/ko/translation.json"
 import { TitleWrapper, TextWrapper, ImageWrapper } from "./styles"
 
-import { withTranslation } from "react-i18next"
+import { withTranslation, WithTranslation } from "react-i18next"
 
 const moveLinkAnimation = keyframes`
   from {
@@ -23,24 +23,20 @@ const moveLinkAnimation = keyframes`
   }
 `
 
-interface IProps {
-	t: any
-}
-
-const HistorySection: React.FC<IProps> = ({ t }) => {
+const HistorySection: React.FC<WithTranslation> = ({ t: translate }) => {
 	return (
 		<Container padding="0 0 0 60px">
 			<MiddleBlock>
 				<Row justify="space-between">
 					<Col lg={11} md={11} sm={12} xs={24}>
 						<TitleWrapper>
-							<h2>{t(Contents.historySection.title[0])}</h2>
-							<h2>{t(Contents.historySection.title[1])}</h2>
+							<h2>{translate(Contents.historySection.title[0])}</h2>
+							<h2>{translate(Contents.historySection.title[1])}</h2>
 						</TitleWrapper>
 						<TextWrapper>
-							<p>{t(Contents.historySection.text[0])}</p>
-							<p>{t(Contents.historySection.text[1])}</p>
-							<p>{t(Contents.historySection.text[2])}</p>
+							<p>{translate(Contents.historySection.text[0])}</p>
+							<p>{translate(Contents.historySection.text[1])}</p>
+							<p>{translate(Contents.historySection.text[2])}</p>
 						</TextWrapper>
 					</Col>
 					<Col lg={11} md={11} sm={12} xs={24}>

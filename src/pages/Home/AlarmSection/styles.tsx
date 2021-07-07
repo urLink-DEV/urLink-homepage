@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 interface contentsWrapperIProps {
-	backgroundColor?: string
-	padding?: string
+	backgroundColor?: string;
+	padding?: string;
 }
 
 export const TitleWrapper = styled("div")`

@@ -7,13 +7,9 @@ import { PngImg } from "../../../common/PngImg"
 import Contents from "../../../locales/ko/translation.json"
 import { Row, TitleWrapper, TextWrapper, SubTitleWrapper } from "./styles"
 
-import { withTranslation } from "react-i18next"
+import { withTranslation, WithTranslation } from "react-i18next"
 
-interface IProps {
-	t: any
-}
-
-const CategorySection: React.FC<IProps> = ({ t }) => {
+const CategorySection: React.FC<WithTranslation> = ({ t: translate }) => {
 	return (
 		<Container>
 			<MiddleBlock animation="reveal">
@@ -23,23 +19,23 @@ const CategorySection: React.FC<IProps> = ({ t }) => {
 					</Col>
 					<Col lg={12} md={12} sm={12} xs={24}>
 						<TitleWrapper>
-							<h2>{t(Contents.categorySection.title[0])}</h2>
-							<h2>{t(Contents.categorySection.title[1])}</h2>
+							<h2>{translate(Contents.categorySection.title[0])}</h2>
+							<h2>{translate(Contents.categorySection.title[1])}</h2>
 						</TitleWrapper>
 						<TextWrapper>
-							<p>{t(Contents.categorySection.text[0])}</p>
-							<p>{t(Contents.categorySection.text[1])}</p>
+							<p>{translate(Contents.categorySection.text[0])}</p>
+							<p>{translate(Contents.categorySection.text[1])}</p>
 						</TextWrapper>
 						<SubTitleWrapper>
 							<h2>
-								{t(Contents.categorySection.title[2])}
-								<span>{t(Contents.categorySection.title[3])}</span>
-								{t(Contents.categorySection.title[4])}
+								{translate(Contents.categorySection.title[2])}
+								<span>{translate(Contents.categorySection.title[3])}</span>
+								{translate(Contents.categorySection.title[4])}
 							</h2>
 						</SubTitleWrapper>
 						<TextWrapper>
-							<p>{t(Contents.categorySection.text[2])}</p>
-							<p>{t(Contents.categorySection.text[3])}</p>
+							<p>{translate(Contents.categorySection.text[2])}</p>
+							<p>{translate(Contents.categorySection.text[3])}</p>
 						</TextWrapper>
 					</Col>
 				</Row>
