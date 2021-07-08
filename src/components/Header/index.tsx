@@ -4,19 +4,21 @@ import clsx from "clsx"
 import { withTranslation, WithTranslation } from "react-i18next"
 import i18n from "i18next"
 import Container from "../../common/Container"
-import { Button } from "../../common/Button"
+import { GetStartedLink } from "../../common/GetStartedLink"
 import { PngImg } from "../../common/PngImg"
 import {
 	HeaderSection,
 	LogoLink,
-	GetStartedButton,
+	GetStartedLinkWrapper,
 	ChangeLanguageButton,
 	ButtonGroup,
 } from "./styles"
 import { getScroll } from "../../common/utils/getWindow"
 import Contents from "../../locales/ko/translation.json"
 
-const Header: React.FC<WithTranslation> = ({ t: translate }) => {
+// import { customTypes } from "home-module"
+
+const Header: React.FC<WithTranslation> = ({ t }) => {
 	const [fixHeader, setFixHeader] = useState(false)
 	const [currentLanguage, setCurrentLanguage] = useState("ko")
 
@@ -30,13 +32,7 @@ const Header: React.FC<WithTranslation> = ({ t: translate }) => {
 		}
 	}
 
-	const onClick = () => {
-		window.open(
-			"https://chrome.google.com/webstore/detail/urlink/eimpopfllbjbhgkgomhhpolhlpaapdai?hl=ko"
-		)
-	}
-
-	const handleChange = (language: string) => {
+	const handleChange = (language: Language) => {
 		setCurrentLanguage(language)
 		i18n.changeLanguage(language)
 	}
@@ -61,15 +57,15 @@ const Header: React.FC<WithTranslation> = ({ t: translate }) => {
 						<PngImg src="logo_full.png" width="108px" />
 					</LogoLink>
 					<ButtonGroup>
-						<GetStartedButton
+						<GetStartedLinkWrapper
 							className={clsx({
 								show: fixHeader,
 							})}
 						>
-							<Button size="small" onClick={onClick}>
-								{translate(Contents.getStartedSection.button)}
-							</Button>
-						</GetStartedButton>
+							<GetStartedLink size="small">
+								{t(Contents.getStartedSection.button)}
+							</GetStartedLink>
+						</GetStartedLinkWrapper>
 						<ChangeLanguageButton currentLanguage={currentLanguage}>
 							<button onClick={() => handleChange("ko")}>한국어</button>
 							<button onClick={() => handleChange("en")}>ENG</button>
