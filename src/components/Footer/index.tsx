@@ -1,7 +1,7 @@
 import { withTranslation, WithTranslation } from "react-i18next"
-import { PngImg } from "../PngImg"
 import Container from "../../baseLayout/Container"
 import Contents from "../../locales/ko/translation.json"
+import IconNotion from "../../assets/img/png/icon_notion.png"
 
 import {
 	FooterSection,
@@ -33,7 +33,7 @@ const Footer: React.FC<WithTranslation> = ({ t: translate }) => {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<PngImg src="icon_notion.png" />
+								<img src={IconNotion} alt="notion" />
 							</a>
 						</RightSide>
 					</SideCotentsWrapper>

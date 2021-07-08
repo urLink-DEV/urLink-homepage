@@ -4,7 +4,8 @@ import { keyframes } from "@emotion/react"
 
 import MiddleBlock from "../../../components/MiddleBlock"
 import Container from "../../../baseLayout/Container"
-import { PngImg } from "../../../components/PngImg"
+import ImageMoveLink from "../../../assets/img/png/img_move_link.png"
+import ImageHistory from "../../../assets/img/png/img_history.png"
 
 import Contents from "../../../locales/ko/translation.json"
 import { TitleWrapper, TextWrapper, ImageWrapper } from "./styles"
@@ -42,10 +43,10 @@ const HistorySection: React.FC<WithTranslation> = ({ t: translate }) => {
 					<Col lg={11} md={11} sm={12} xs={24}>
 						<ImageWrapper>
 							<Reveal keyframes={moveLinkAnimation}>
-								<PngImg src={"img_move_link.png"} width="30%" />
+								<img src={ImageMoveLink} width="30%" alt="" />
 							</Reveal>
 							<Fade direction="right">
-								<PngImg src={"img_history.png"} width="100%" />
+								<img src={ImageHistory} width="100%" alt="" />
 							</Fade>
 						</ImageWrapper>
 					</Col>

@@ -23,6 +23,9 @@ export const SubTextWrapper = styled("div")`
 	}
 `
 export const CardsImageWrapper = styled("div")`
+	img {
+		width: 100%;
+	}
 	img:last-child {
 		display: none;
 	}
@@ -41,9 +44,15 @@ export const ButtonImageWrapper = styled("div")`
 	text-align: left;
 	margin-bottom: 1rem;
 	margin-left: -1rem;
+	img {
+		width: 30%;
+	}
 `
 export const ImageWrapper = styled("div")`
 	margin-left: -4rem;
+	img {
+		width: 100%;
+	}
 `
 
 export const RowWrapper = styled("div")`

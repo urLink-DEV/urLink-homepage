@@ -2,7 +2,7 @@ import { Col } from "antd"
 
 import MiddleBlock from "../../../components/MiddleBlock"
 import Container from "../../../baseLayout/Container"
-import { PngImg } from "../../../components/PngImg"
+import ImageCategory from "../../../assets/img/png/img_category.png"
 
 import Contents from "../../../locales/ko/translation.json"
 import { Row, TitleWrapper, TextWrapper, SubTitleWrapper } from "./styles"
@@ -15,7 +15,7 @@ const CategorySection: React.FC<WithTranslation> = ({ t: translate }) => {
 			<MiddleBlock animation="reveal">
 				<Row>
 					<Col lg={11} md={11} sm={11} xs={24}>
-						<PngImg src={"img_category.png"} width="80%" />
+						<img src={ImageCategory} width="80%" alt="" />
 					</Col>
 					<Col lg={12} md={12} sm={12} xs={24}>
 						<TitleWrapper>

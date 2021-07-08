@@ -33,6 +33,9 @@ export const ImageWrapper = styled("div")`
 	width: 13.5rem;
 	height: 13.5rem;
 	margin-bottom: 1rem;
+	img {
+		width: 100%;
+	}
 
 	@media screen and (max-width: 768px) {
 		width: 9rem;

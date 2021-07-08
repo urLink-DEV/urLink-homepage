@@ -1,7 +1,7 @@
 import MiddleBlock from "../../../components/MiddleBlock"
 import Container from "../../../baseLayout/Container"
 import { GetStartedLink } from "../../../components/GetStartedLink"
-import { PngImg } from "../../../components/PngImg"
+import ImageDesktop from "../../../assets/img/png/mockup_desktop.png"
 
 import Contents from "../../../locales/ko/translation.json"
 import { ButtonWrapper } from "./styles"
@@ -16,11 +16,11 @@ const IntroSection: React.FC<WithTranslation> = ({ t: translate }) => {
 				<p>{translate(Contents.introSection.text[0])}</p>
 				<p>{translate(Contents.introSection.text[1])}</p>
 				<ButtonWrapper>
-					<GetStartedLink imgSrc={"logo28.png"} fixedWidth="17rem">
+					<GetStartedLink logo={true} fixedWidth="17rem">
 						{translate(Contents.introSection.button)}
 					</GetStartedLink>
 				</ButtonWrapper>
-				<PngImg src={"mockup_desktop.png"} width={"100%"} />
+				<img src={ImageDesktop} width="100%" alt="" />
 			</MiddleBlock>
 		</Container>
 	)

@@ -26,6 +26,9 @@ export const HeaderSection = styled("header")`
 `
 export const LogoLink = styled(Link)`
 	display: flex;
+	img {
+		width: 108px;
+	}
 	@media screen and (max-width: 375px) {
 		img {
 			width: 70px;

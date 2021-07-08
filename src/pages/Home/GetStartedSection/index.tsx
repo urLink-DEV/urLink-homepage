@@ -18,7 +18,7 @@ const GetStartedSection: React.FC<WithTranslation> = ({ t: translate }) => {
 				</ContentsWrapper>
 				<ButtonWrapper>
 					<GetStartedLink
-						imgSrc={"logo28.png"}
+						logo={true}
 						fixedWidth="17rem"
 						backgroundColor="#fff"
 						color="#000"

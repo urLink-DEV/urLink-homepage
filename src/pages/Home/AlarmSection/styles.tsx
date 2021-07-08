@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 interface contentsWrapperIProps {
-	backgroundColor?: string;
-	padding?: string;
+	backgroundColor?: string
+	padding?: string
 }
 
 export const TitleWrapper = styled("div")`
@@ -80,12 +80,16 @@ export const RowWrapper = styled("div")`
 export const AlarmImageWrapper = styled("div")`
 	display: inline-block;
 	img {
+		width: 100%;
 		max-width: 20rem;
 	}
 `
 export const BellImageWrapper = styled("div")`
 	width: 7rem;
 	margin-top: 1rem;
+	img {
+		width: 100%;
+	}
 	@media screen and (max-width: 576px) {
 		width: 4rem;
 		margin: 1rem auto 1rem;

@@ -1,7 +1,11 @@
 import { Row, Col } from "antd"
 import MiddleBlock from "../../../components/MiddleBlock"
 import Container from "../../../baseLayout/Container"
-import { PngImg } from "../../../components/PngImg"
+
+import IconBell from "../../../assets/img/png/icon_bell.png"
+import ImageSetAlarm from "../../../assets/img/png/img_set_alarm.png"
+import ImageNotification from "../../../assets/img/png/img_notifications.png"
+import ImageAlarms from "../../../assets/img/png/img_alarms.png"
 
 import Contents from "../../../locales/ko/translation.json"
 import {
@@ -31,13 +35,13 @@ const AlarmSection: React.FC<WithTranslation> = ({ t: translate }) => {
 									<h3>{translate(Contents.alarmSection.text[1])}</h3>
 									<h3>{translate(Contents.alarmSection.text[2])}</h3>
 									<BellImageWrapper>
-										<PngImg src="icon_bell.png" width="100%" />
+										<img src={IconBell} alt="" />
 									</BellImageWrapper>
 								</div>
 							</Col>
 							<Col lg={10} md={10} sm={10} xs={24}>
 								<AlarmImageWrapper>
-									<PngImg src="img_set_alarm.png" width="100%" />
+									<img src={ImageSetAlarm} alt="" />
 								</AlarmImageWrapper>
 							</Col>
 						</Row>
@@ -48,13 +52,13 @@ const AlarmSection: React.FC<WithTranslation> = ({ t: translate }) => {
 						<Col lg={12} md={12} sm={12} xs={24}>
 							<ContentsWrapper backgroundColor="#5A99F7" padding="2rem 2rem 0">
 								<h4>{translate(Contents.alarmSection.text[3])}</h4>
-								<PngImg src="img_notifications.png" width="100%" />
+								<img src={ImageNotification} width="100%" alt="" />
 							</ContentsWrapper>
 						</Col>
 						<Col lg={11} md={11} sm={11} xs={24}>
 							<ContentsWrapper backgroundColor="#F8F8F8" padding="2rem 2rem 0">
 								<h4>{translate(Contents.alarmSection.text[4])}</h4>
-								<PngImg src="img_alarms.png" width="80%" />
+								<img src={ImageAlarms} width="80%" alt="" />
 							</ContentsWrapper>
 						</Col>
 					</Row>

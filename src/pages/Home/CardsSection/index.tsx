@@ -2,7 +2,10 @@ import { Row, Col } from "antd"
 
 import MiddleBlock from "../../../components/MiddleBlock"
 import Container from "../../../baseLayout/Container"
-import { PngImg } from "../../../components/PngImg"
+import ImageCards2 from "../../../assets/img/png/img_cards_2.png"
+import ImageCards3 from "../../../assets/img/png/img_cards_3.png"
+import ImageMobileCards from "../../../assets/img/png/img_m_cards.png"
+import ImageButtons from "../../../assets/img/png/img_button_group.png"
 
 import Contents from "../../../locales/ko/translation.json"
 import {
@@ -34,8 +37,8 @@ const CardsSection: React.FC<WithTranslation> = ({ t: translate }) => {
 					</Col>
 					<Col lg={11} md={11} sm={11} xs={24}>
 						<CardsImageWrapper>
-							<PngImg src={"img_cards_2.png"} width="100%" />
-							<PngImg src={"img_m_cards.png"} width="100%" />
+							<img src={ImageCards2} alt="" />
+							<img src={ImageMobileCards} alt="" />
 						</CardsImageWrapper>
 					</Col>
 				</Row>
@@ -43,12 +46,12 @@ const CardsSection: React.FC<WithTranslation> = ({ t: translate }) => {
 					<Row justify="space-between">
 						<Col lg={13} md={13} sm={13} xs={24}>
 							<ImageWrapper>
-								<PngImg src={"img_cards_3.png"} width="100%" />
+								<img src={ImageCards3} alt="" />
 							</ImageWrapper>
 						</Col>
 						<Col lg={10} md={10} sm={10} xs={24}>
 							<ButtonImageWrapper>
-								<PngImg src={"img_button_group.png"} width="30%" />
+								<img src={ImageButtons} alt="" />
 							</ButtonImageWrapper>
 							<SubTextWrapper>
 								<p>{translate(Contents.cardsSection.subText[0])}</p>

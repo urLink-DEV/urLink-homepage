@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { SvgIcon } from "../SvgIcon"
+import IconScrollTop from "../../assets/img/svg/scroll-top.svg"
 import { ScrollUpContainer } from "./styles"
 import { getScroll } from "../../utils/getWindow"
 
@@ -33,7 +33,7 @@ const ScrollToTop = () => {
 
 	return (
 		<ScrollUpContainer onClick={scrollUp} show={showScroll}>
-			<SvgIcon src="scroll-top.svg" width="20px" height="20px" />
+			<img src={IconScrollTop} width="20px" height="20px" alt="scroll to top" />
 		</ScrollUpContainer>
 	)
 }

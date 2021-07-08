@@ -2,7 +2,7 @@ import { Col } from "antd"
 
 import MiddleBlock from "../../../components/MiddleBlock"
 import Container from "../../../baseLayout/Container"
-import { PngImg } from "../../../components/PngImg"
+import ImageSaveChrome from "../../../assets/img/png/img_save_on_chrome.png"
 
 import Contents from "../../../locales/ko/translation.json"
 import { Row, TitleWrapper, TextWrapper } from "./styles"
@@ -15,7 +15,7 @@ const DirectSaveSection: React.FC<WithTranslation> = ({ t: translate }) => {
 			<MiddleBlock animation="reveal" paddingBottom="0px">
 				<Row>
 					<Col lg={11} md={11} sm={11} xs={24}>
-						<PngImg src={"img_save_on_chrome.png"} width="100%" />
+						<img src={ImageSaveChrome} width="100%" alt="" />
 					</Col>
 					<Col lg={11} md={11} sm={12} xs={24}>
 						<TitleWrapper>

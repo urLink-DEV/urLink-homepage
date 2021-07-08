@@ -5,7 +5,6 @@ import { withTranslation, WithTranslation } from "react-i18next"
 import i18n from "i18next"
 import Container from "../../baseLayout/Container"
 import { GetStartedLink } from "../GetStartedLink"
-import { PngImg } from "../PngImg"
 import {
 	HeaderSection,
 	LogoLink,
@@ -15,8 +14,7 @@ import {
 } from "./styles"
 import { getScroll } from "../../utils/getWindow"
 import Contents from "../../locales/ko/translation.json"
-
-// import { customTypes } from "home-module"
+import ImageLogo from "../../assets/img/png/logo_full.png"
 
 const Header: React.FC<WithTranslation> = ({ t }) => {
 	const [fixHeader, setFixHeader] = useState(false)
@@ -54,7 +52,7 @@ const Header: React.FC<WithTranslation> = ({ t }) => {
 			<Container>
 				<Row justify="space-between">
 					<LogoLink to="/" aria-label="homepage">
-						<PngImg src="logo_full.png" width="108px" />
+						<img src={ImageLogo} alt="urLink" />
 					</LogoLink>
 					<ButtonGroup>
 						<GetStartedLinkWrapper
@@ -62,7 +60,7 @@ const Header: React.FC<WithTranslation> = ({ t }) => {
 								show: fixHeader,
 							})}
 						>
-							<GetStartedLink size="small">
+							<GetStartedLink logo={false} size="small">
 								{t(Contents.getStartedSection.button)}
 							</GetStartedLink>
 						</GetStartedLinkWrapper>

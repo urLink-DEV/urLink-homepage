@@ -1,14 +1,14 @@
 import { StyledLink } from "./styles"
-import { PngImg } from "../PngImg"
 import { getLocalStorageItem } from "../../utils/getLocalStorageItem"
+import ImageLogo from "../../assets/img/png/logo28.png"
+
 export interface IProps {
 	size?: string
 	color?: string
 	backgroundColor?: string
 	borderRadius?: string
 	fixedWidth?: string
-	name?: string
-	imgSrc?: string
+	logo?: boolean
 }
 
 export const GetStartedLink: React.FC<IProps> = ({
@@ -17,8 +17,8 @@ export const GetStartedLink: React.FC<IProps> = ({
 	backgroundColor,
 	borderRadius,
 	fixedWidth,
-	imgSrc,
 	children,
+	logo,
 }) => {
 	const selectedLanguage = getLocalStorageItem("i18nextLng")
 	const URL =
@@ -36,7 +36,7 @@ export const GetStartedLink: React.FC<IProps> = ({
 			target="_blank"
 			rel="noopener noreferrer"
 		>
-			{imgSrc && <PngImg src={imgSrc} />}
+			{logo && <img src={ImageLogo} alt="link to chrome webstore" />}
 			{children}
 		</StyledLink>
 	)
