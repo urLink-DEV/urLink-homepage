@@ -1,5 +1,5 @@
 import { StyledLink } from "./styles"
-import { getLocalStorageItem } from "../../utils/getLocalStorageItem"
+import getLocalStorageItem from "../../utils/getLocalStorageItem"
 import ImageLogo from "../../assets/img/png/logo28.png"
 
 export interface IProps {

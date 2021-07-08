@@ -12,7 +12,7 @@ import {
 	ChangeLanguageButton,
 	ButtonGroup,
 } from "./styles"
-import { getScroll } from "../../utils/getWindow"
+import getScroll from "../../utils/getScroll"
 import Contents from "../../locales/ko/translation.json"
 import ImageLogo from "../../assets/img/png/logo_full.png"
 

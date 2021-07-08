@@ -1,4 +1,4 @@
-export const getLocalStorageItem = (key: string) => {
+export default function getLocalStorageItem(key: string) {
 	try {
 		return window.localStorage.getItem(key)
 	} catch (error) {

@@ -14,8 +14,7 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"noEmit": true,
-		"jsx": "react-jsx",
-		"typeRoots": ["./src/typings"] //커스텀 타입 루트 설정
+		"jsx": "react-jsx"
 	},
 	"include": ["src"]
 }

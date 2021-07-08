@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import IconScrollTop from "../../assets/img/svg/scroll-top.svg"
 import { ScrollUpContainer } from "./styles"
-import { getScroll } from "../../utils/getWindow"
+import getScroll from "../../utils/getScroll"
 
 const ScrollToTop = () => {
 	const [showScroll, setShowScroll] = useState(false)

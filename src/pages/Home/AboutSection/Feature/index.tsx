@@ -1,4 +1,5 @@
-import { FeatureWrapper, ImageWrapper } from "./styles"
+import { FeatureWrapper, ImageWrapper } from "../styles"
+
 interface IProps {
 	img: string
 	topText: string
