@@ -1,7 +1,7 @@
 import { StyledContainer } from "./styles"
 
 export interface IProps {
-	padding?: string
+	padding?: string;
 }
 
 const Container: React.FC<IProps> = ({ padding, children }) => (

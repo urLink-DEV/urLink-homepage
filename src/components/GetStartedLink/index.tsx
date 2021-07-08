@@ -1,4 +1,4 @@
-import { StyledButton } from "./styles"
+import { StyledLink } from "./styles"
 import { PngImg } from "../PngImg"
 
 export interface IProps {
@@ -9,28 +9,28 @@ export interface IProps {
 	fixedWidth?: string
 	name?: string
 	imgSrc?: string
-	onClick?: () => void
 }
 
-export const Button: React.FC<IProps> = ({
+export const GetStartedLink: React.FC<IProps> = ({
 	size,
 	color,
 	backgroundColor,
 	borderRadius,
 	fixedWidth,
-	onClick,
 	imgSrc,
 	children,
 }) => (
-	<StyledButton
+	<StyledLink
 		size={size}
 		color={color}
 		backgroundColor={backgroundColor}
 		borderRadius={borderRadius}
 		fixedWidth={fixedWidth}
-		onClick={onClick}
+		href="https://chrome.google.com/webstore/detail/urlink/eimpopfllbjbhgkgomhhpolhlpaapdai?hl=ko"
+		target="_blank"
+		rel="noopener noreferrer"
 	>
 		{imgSrc && <PngImg src={imgSrc} />}
 		{children}
-	</StyledButton>
+	</StyledLink>
 )

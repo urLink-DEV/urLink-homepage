@@ -1,6 +1,6 @@
 import { withTranslation, WithTranslation } from "react-i18next"
-import { PngImg } from "../../common/PngImg"
-import Container from "../../common/Container"
+import { PngImg } from "../PngImg"
+import Container from "../../baseLayout/Container"
 import Contents from "../../locales/ko/translation.json"
 
 import {

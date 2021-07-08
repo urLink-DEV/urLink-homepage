@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { SvgIcon } from "../SvgIcon"
 import { ScrollUpContainer } from "./styles"
-import { getScroll } from "../utils/getWindow"
+import { getScroll } from "../../utils/getWindow"
 
 const ScrollToTop = () => {
 	const [showScroll, setShowScroll] = useState(false)
@@ -28,7 +28,7 @@ const ScrollToTop = () => {
 		return () => {
 			window.removeEventListener("scroll", checkScrollTop)
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line
 	}, [])
 
 	return (

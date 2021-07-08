@@ -1,7 +1,7 @@
 import { StyledContainerWrapper } from "./styles"
 
 export interface IProps {
-	backgroundColor?: string
+	backgroundColor?: string;
 }
 
 const ContainerWrapper: React.FC<IProps> = ({ backgroundColor, children }) => (

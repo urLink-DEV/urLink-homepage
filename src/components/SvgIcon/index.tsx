@@ -1,7 +1,7 @@
 interface IProps {
-	src: string
-	width: string
-	height: string
+	src: string;
+	width: string;
+	height: string;
 }
 
 export const SvgIcon: React.FC<IProps> = ({ src, width, height }) => (

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 interface IProps {
-	show?: boolean
+	show?: boolean;
 }
 
 export const ScrollUpContainer = styled("div")<IProps>`

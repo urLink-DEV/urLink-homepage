@@ -1,7 +1,7 @@
 import MiddleBlock from "../../../components/MiddleBlock"
-import Container from "../../../common/Container"
-import { Button } from "../../../common/Button"
-import { PngImg } from "../../../common/PngImg"
+import Container from "../../../baseLayout/Container"
+import { GetStartedLink } from "../../../components/GetStartedLink"
+import { PngImg } from "../../../components/PngImg"
 
 import Contents from "../../../locales/ko/translation.json"
 import { ButtonWrapper } from "./styles"
@@ -9,11 +9,6 @@ import { ButtonWrapper } from "./styles"
 import { withTranslation, WithTranslation } from "react-i18next"
 
 const IntroSection: React.FC<WithTranslation> = ({ t: translate }) => {
-	const onClick = () => {
-		window.open(
-			"https://chrome.google.com/webstore/detail/urlink/eimpopfllbjbhgkgomhhpolhlpaapdai?hl=ko"
-		)
-	}
 	return (
 		<Container>
 			<MiddleBlock animation="reveal" paddingBottom="0px">
@@ -21,9 +16,9 @@ const IntroSection: React.FC<WithTranslation> = ({ t: translate }) => {
 				<p>{translate(Contents.introSection.text[0])}</p>
 				<p>{translate(Contents.introSection.text[1])}</p>
 				<ButtonWrapper>
-					<Button imgSrc={"logo28.png"} fixedWidth="17rem" onClick={onClick}>
+					<GetStartedLink imgSrc={"logo28.png"} fixedWidth="17rem">
 						{translate(Contents.introSection.button)}
-					</Button>
+					</GetStartedLink>
 				</ButtonWrapper>
 				<PngImg src={"mockup_desktop.png"} width={"100%"} />
 			</MiddleBlock>

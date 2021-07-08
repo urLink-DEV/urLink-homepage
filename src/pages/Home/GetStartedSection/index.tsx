@@ -1,6 +1,6 @@
 import MiddleBlock from "../../../components/MiddleBlock"
-import Container from "../../../common/Container"
-import { Button } from "../../../common/Button"
+import Container from "../../../baseLayout/Container"
+import { GetStartedLink } from "../../../components/GetStartedLink"
 
 import Contents from "../../../locales/ko/translation.json"
 import { ContentsWrapper, ButtonWrapper } from "./styles"
@@ -8,11 +8,6 @@ import { ContentsWrapper, ButtonWrapper } from "./styles"
 import { withTranslation, WithTranslation } from "react-i18next"
 
 const GetStartedSection: React.FC<WithTranslation> = ({ t: translate }) => {
-	const onClick = () => {
-		window.open(
-			"https://chrome.google.com/webstore/detail/urlink/eimpopfllbjbhgkgomhhpolhlpaapdai?hl=ko"
-		)
-	}
 	return (
 		<Container>
 			<MiddleBlock animation="reveal">
@@ -22,15 +17,14 @@ const GetStartedSection: React.FC<WithTranslation> = ({ t: translate }) => {
 					<p>{translate(Contents.getStartedSection.text[1])}</p>
 				</ContentsWrapper>
 				<ButtonWrapper>
-					<Button
+					<GetStartedLink
 						imgSrc={"logo28.png"}
 						fixedWidth="17rem"
 						backgroundColor="#fff"
 						color="#000"
-						onClick={onClick}
 					>
 						{translate(Contents.getStartedSection.button)}
-					</Button>
+					</GetStartedLink>
 				</ButtonWrapper>
 			</MiddleBlock>
 		</Container>

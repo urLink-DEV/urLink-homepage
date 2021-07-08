@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 
 interface currentLanguageIProps {
-	currentLanguage: string;
+	currentLanguage: string
 }
 
 export const HeaderSection = styled("header")`
@@ -36,7 +36,7 @@ export const LogoLink = styled(Link)`
 export const ButtonGroup = styled("div")`
 	display: flex;
 `
-export const GetStartedButton = styled("div")`
+export const GetStartedLinkWrapper = styled("div")`
 	display: none;
 	&.show {
 		display: block;

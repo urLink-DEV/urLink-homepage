@@ -3,9 +3,9 @@ import { Row } from "antd"
 import clsx from "clsx"
 import { withTranslation, WithTranslation } from "react-i18next"
 import i18n from "i18next"
-import Container from "../../common/Container"
-import { GetStartedLink } from "../../common/GetStartedLink"
-import { PngImg } from "../../common/PngImg"
+import Container from "../../baseLayout/Container"
+import { GetStartedLink } from "../GetStartedLink"
+import { PngImg } from "../PngImg"
 import {
 	HeaderSection,
 	LogoLink,
@@ -13,7 +13,7 @@ import {
 	ChangeLanguageButton,
 	ButtonGroup,
 } from "./styles"
-import { getScroll } from "../../common/utils/getWindow"
+import { getScroll } from "../../utils/getWindow"
 import Contents from "../../locales/ko/translation.json"
 
 // import { customTypes } from "home-module"

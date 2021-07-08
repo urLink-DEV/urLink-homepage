@@ -1,8 +1,8 @@
 import { Col } from "antd"
 
 import MiddleBlock from "../../../components/MiddleBlock"
-import Container from "../../../common/Container"
-import { PngImg } from "../../../common/PngImg"
+import Container from "../../../baseLayout/Container"
+import { PngImg } from "../../../components/PngImg"
 
 import Contents from "../../../locales/ko/translation.json"
 import { Row, TitleWrapper, TextWrapper } from "./styles"

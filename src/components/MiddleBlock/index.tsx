@@ -4,7 +4,7 @@ import Reveal from "react-awesome-reveal"
 import { MiddleBlockSection, ContentWrapper, CustomAnimation } from "./styles"
 
 export interface IProps extends WithTranslation {
-	animation?: string
+	animation?: "reveal" | ""
 	paddingBottom?: string
 }
 

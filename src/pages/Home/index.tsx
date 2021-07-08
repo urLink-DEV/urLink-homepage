@@ -1,6 +1,6 @@
 import { lazy } from "react"
 
-import ContainerWrapper from "../../common/ContainerWrapper"
+import ContainerWrapper from "../../baseLayout/ContainerWrapper"
 import IntroSection from "./IntroSection"
 import AboutSection from "./AboutSection"
 import HistorySection from "./HistorySection"
@@ -10,7 +10,7 @@ import CardsSection from "./CardsSection"
 import AlarmSection from "./AlarmSection"
 import GetStartedSection from "./GetStartedSection"
 
-const ScrollToTop = lazy(() => import("../../common/ScrollToTop"))
+const ScrollToTop = lazy(() => import("../../components/ScrollToTop"))
 
 const Home = () => {
 	return (

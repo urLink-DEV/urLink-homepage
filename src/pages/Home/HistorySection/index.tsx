@@ -3,8 +3,8 @@ import Reveal, { Fade } from "react-awesome-reveal"
 import { keyframes } from "@emotion/react"
 
 import MiddleBlock from "../../../components/MiddleBlock"
-import Container from "../../../common/Container"
-import { PngImg } from "../../../common/PngImg"
+import Container from "../../../baseLayout/Container"
+import { PngImg } from "../../../components/PngImg"
 
 import Contents from "../../../locales/ko/translation.json"
 import { TitleWrapper, TextWrapper, ImageWrapper } from "./styles"

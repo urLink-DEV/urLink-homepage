@@ -1,5 +1,5 @@
 import MiddleBlock from "../../../components/MiddleBlock"
-import Container from "../../../common/Container"
+import Container from "../../../baseLayout/Container"
 import Feature from "./Feature"
 
 import Contents from "../../../locales/ko/translation.json"
