@@ -1,6 +1,6 @@
 import { StyledLink } from "./styles"
 import { PngImg } from "../PngImg"
-
+import { getLocalStorageItem } from "../../utils/getLocalStorageItem"
 export interface IProps {
 	size?: string
 	color?: string
@@ -19,18 +19,25 @@ export const GetStartedLink: React.FC<IProps> = ({
 	fixedWidth,
 	imgSrc,
 	children,
-}) => (
-	<StyledLink
-		size={size}
-		color={color}
-		backgroundColor={backgroundColor}
-		borderRadius={borderRadius}
-		fixedWidth={fixedWidth}
-		href="https://chrome.google.com/webstore/detail/urlink/eimpopfllbjbhgkgomhhpolhlpaapdai?hl=ko"
-		target="_blank"
-		rel="noopener noreferrer"
-	>
-		{imgSrc && <PngImg src={imgSrc} />}
-		{children}
-	</StyledLink>
-)
+}) => {
+	const selectedLanguage = getLocalStorageItem("i18nextLng")
+	const URL =
+		"https://chrome.google.com/webstore/detail/urlink/eimpopfllbjbhgkgomhhpolhlpaapdai?hl=" +
+		selectedLanguage
+
+	return (
+		<StyledLink
+			size={size}
+			color={color}
+			backgroundColor={backgroundColor}
+			borderRadius={borderRadius}
+			fixedWidth={fixedWidth}
+			href={URL}
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			{imgSrc && <PngImg src={imgSrc} />}
+			{children}
+		</StyledLink>
+	)
+}
