@@ -18,6 +18,10 @@ export const StyledLink = styled("a")<IProps>`
 	margin-top: ${(p) => (p.size === "small" ? 0 : "0.625rem")};
 	border: none;
 	transition: all 0.3s ease-in-out;
+	:hover {
+		color: ${(p) => (p.color ? p.color : "#fff")};
+		transform: scale(1.05);
+	}
 
 	> img {
 		margin-right: 1rem;
