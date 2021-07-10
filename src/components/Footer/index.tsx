@@ -17,7 +17,6 @@ const Footer: React.FC<WithTranslation> = ({ t: translate }) => {
 				<Container>
 					<SideCotentsWrapper>
 						<LeftSide>
-							<span>{translate(Contents.footerSection.text[0])}</span>
 							<a
 								href="https://www.notion.so/vvidstudio/858782886bc643da8831688192c642a9"
 								target="_blank"
@@ -25,6 +24,10 @@ const Footer: React.FC<WithTranslation> = ({ t: translate }) => {
 							>
 								{translate(Contents.footerSection.text[1])}
 							</a>
+							<a href="mailto:admin@urlink-official.com">
+								{translate(Contents.footerSection.text[2])}
+							</a>
+							<span>{translate(Contents.footerSection.text[0])}</span>
 						</LeftSide>
 
 						<RightSide>

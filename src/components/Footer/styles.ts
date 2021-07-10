@@ -20,8 +20,15 @@ export const LeftSide = styled("div")`
 		margin-right: 1rem;
 	}
 	a {
+		margin-right: 1rem;
 		font-size: 0.9rem;
 		color: #333;
+	}
+	a:hover {
+		color: #2083ff;
+	}
+	@media screen and (max-width: 375px) {
+		max-width: 17rem;
 	}
 `
 

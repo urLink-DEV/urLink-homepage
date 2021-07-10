@@ -86,6 +86,6 @@
 		"button": "지금 시작하기"
 	},
 	"footerSection": {
-		"text": ["©2021 Urlink. All Rights Reserved.", "서비스 이용약관"]
+		"text": ["©2021 Urlink. All Rights Reserved.", "서비스 이용약관", "문의"]
 	}
 }
