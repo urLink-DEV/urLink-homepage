@@ -15,32 +15,36 @@ import {
   ImageWrapper,
   CardsImageWrapper,
   ButtonImageWrapper,
-  RowWrapper,
+  FirstRowWrapper,
+  LastRowWrapper,
 } from './styles'
 
 const CardsSection: React.FC<WithTranslation> = ({ t: translate }) => {
   return (
     <Container>
       <MiddleBlock animation="reveal">
-        <Row justify="space-between">
-          <Col lg={13} md={13} sm={13} xs={24}>
-            <TitleWrapper>
-              <h2>{translate(Contents.cardsSection.title[0])}</h2>
-              <h2>{translate(Contents.cardsSection.title[1])}</h2>
-            </TitleWrapper>
-            <TextWrapper>
-              <p>{translate(Contents.cardsSection.text[0])}</p>
-              <p>{translate(Contents.cardsSection.text[1])}</p>
-            </TextWrapper>
-          </Col>
-          <Col lg={11} md={11} sm={11} xs={24}>
-            <CardsImageWrapper>
-              <img src={ImageCards2} alt="" />
-              <img src={ImageMobileCards} alt="" />
-            </CardsImageWrapper>
-          </Col>
-        </Row>
-        <RowWrapper>
+        <FirstRowWrapper>
+          <Row justify="space-between">
+            <Col lg={13} md={13} sm={13} xs={24}>
+              <TitleWrapper>
+                <h2>{translate(Contents.cardsSection.title[0])}</h2>
+                <h2>{translate(Contents.cardsSection.title[1])}</h2>
+              </TitleWrapper>
+              <TextWrapper>
+                <p>{translate(Contents.cardsSection.text[0])}</p>
+                <p>{translate(Contents.cardsSection.text[1])}</p>
+              </TextWrapper>
+            </Col>
+            <Col lg={11} md={11} sm={11} xs={24}>
+              <CardsImageWrapper>
+                <img src={ImageCards2} alt="" />
+                <img src={ImageMobileCards} alt="" />
+              </CardsImageWrapper>
+            </Col>
+          </Row>
+        </FirstRowWrapper>
+
+        <LastRowWrapper>
           <Row justify="space-between">
             <Col lg={13} md={13} sm={13} xs={24}>
               <ImageWrapper>
@@ -58,7 +62,7 @@ const CardsSection: React.FC<WithTranslation> = ({ t: translate }) => {
               </SubTextWrapper>
             </Col>
           </Row>
-        </RowWrapper>
+        </LastRowWrapper>
       </MiddleBlock>
     </Container>
   )

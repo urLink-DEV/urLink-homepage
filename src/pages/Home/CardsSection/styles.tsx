@@ -55,7 +55,11 @@ export const ImageWrapper = styled('div')`
   }
 `
 
-export const RowWrapper = styled('div')`
+export const FirstRowWrapper = styled('div')`
+  margin-top: 8rem;
+`
+
+export const LastRowWrapper = styled('div')`
   margin-top: 3rem;
   @media screen and (max-width: 576px) {
     display: none;
