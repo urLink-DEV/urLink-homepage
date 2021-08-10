@@ -1,11 +1,12 @@
-import { StyledContainer } from "./styles"
+/* eslint-disable import/no-cycle */
+import { StyledContainer } from './styles'
 
 export interface IProps {
-	padding?: string;
+  padding?: string
 }
 
 const Container: React.FC<IProps> = ({ padding, children }) => (
-	<StyledContainer padding={padding}>{children}</StyledContainer>
+  <StyledContainer padding={padding}>{children}</StyledContainer>
 )
 
 export default Container

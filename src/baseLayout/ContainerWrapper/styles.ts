@@ -1,6 +1,8 @@
-import styled from "styled-components"
-import { IProps } from "../ContainerWrapper"
+import styled from 'styled-components'
 
-export const StyledContainerWrapper = styled("div")<IProps>`
-	background-color: ${(p) => (p.backgroundColor ? p.backgroundColor : "#fff")};
+/* eslint-disable import/no-cycle */
+import { IProps } from '.'
+
+export const StyledContainerWrapper = styled('div')<IProps>`
+  background-color: ${(p) => (p.backgroundColor ? p.backgroundColor : '#fff')};
 `

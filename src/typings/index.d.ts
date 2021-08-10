@@ -1,1 +1,1 @@
-declare type Language = "ko" | "en"
+declare type Language = 'ko' | 'en'

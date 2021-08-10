@@ -1,13 +1,12 @@
-import { StyledContainerWrapper } from "./styles"
+/* eslint-disable import/no-cycle */
+import { StyledContainerWrapper } from './styles'
 
 export interface IProps {
-	backgroundColor?: string;
+  backgroundColor?: string
 }
 
 const ContainerWrapper: React.FC<IProps> = ({ backgroundColor, children }) => (
-	<StyledContainerWrapper backgroundColor={backgroundColor}>
-		{children}
-	</StyledContainerWrapper>
+  <StyledContainerWrapper backgroundColor={backgroundColor}>{children}</StyledContainerWrapper>
 )
 
 export default ContainerWrapper
