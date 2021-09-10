@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+import ReactGA from 'react-ga'
+
 import IconScrollTop from '../../assets/img/svg/scroll-top.svg'
 import getScroll from '../../utils/getScroll'
 import { ScrollUpContainer } from './styles'
@@ -21,6 +23,11 @@ const ScrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
+    })
+    ReactGA.event({
+      category: 'landing page',
+      action: 'scroll up',
+      label: 'scroll up btn clicked',
     })
   }
 
