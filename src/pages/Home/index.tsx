@@ -1,4 +1,4 @@
-import { lazy } from 'react'
+import { Suspense, lazy } from 'react'
 
 import ContainerWrapper from '../../baseLayout/ContainerWrapper'
 import AboutSection from './AboutSection'
@@ -15,7 +15,9 @@ const ScrollToTop = lazy(() => import('../../components/ScrollToTop'))
 const Home = () => {
   return (
     <>
-      <ScrollToTop />
+      <Suspense fallback={null}>
+        <ScrollToTop />
+      </Suspense>
 
       <ContainerWrapper>
         <IntroSection />

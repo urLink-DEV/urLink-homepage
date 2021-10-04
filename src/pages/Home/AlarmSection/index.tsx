@@ -5,6 +5,9 @@ import IconBell from '../../../assets/img/png/icon_bell.png'
 import ImageAlarms from '../../../assets/img/png/img_alarms.png'
 import ImageNotification from '../../../assets/img/png/img_notifications.png'
 import ImageSetAlarm from '../../../assets/img/png/img_set_alarm.png'
+import ImageAlarmsWebp from '../../../assets/img/webp/img_alarms.webp'
+import ImageNotificationWebp from '../../../assets/img/webp/img_notifications.webp'
+import ImageSetAlarmWebp from '../../../assets/img/webp/img_set_alarm.webp'
 import Container from '../../../baseLayout/Container'
 import MiddleBlock from '../../../components/MiddleBlock'
 import Contents from '../../../locales/ko/translation.json'
@@ -33,7 +36,10 @@ const AlarmSection: React.FC<WithTranslation> = ({ t: translate }) => {
               </Col>
               <Col lg={10} md={10} sm={10} xs={24}>
                 <AlarmImageWrapper>
-                  <img src={ImageSetAlarm} alt="" />
+                  <picture>
+                    <source srcSet={ImageSetAlarmWebp} type="image/webp" />
+                    <img src={ImageSetAlarm} alt="" loading="lazy" />
+                  </picture>
                 </AlarmImageWrapper>
               </Col>
             </Row>
@@ -44,13 +50,20 @@ const AlarmSection: React.FC<WithTranslation> = ({ t: translate }) => {
             <Col lg={12} md={12} sm={12} xs={24}>
               <ContentsWrapper backgroundColor="#5A99F7" padding="2rem 2rem 0">
                 <h4>{translate(Contents.alarmSection.text[3])}</h4>
-                <img src={ImageNotification} width="100%" alt="" />
+
+                <picture>
+                  <source srcSet={ImageNotificationWebp} type="image/webp" />
+                  <img src={ImageNotification} width="100%" alt="" />
+                </picture>
               </ContentsWrapper>
             </Col>
             <Col lg={11} md={11} sm={11} xs={24}>
               <ContentsWrapper backgroundColor="#F8F8F8" padding="2rem 2rem 0">
                 <h4>{translate(Contents.alarmSection.text[4])}</h4>
-                <img src={ImageAlarms} width="80%" alt="" />
+                <picture>
+                  <source srcSet={ImageAlarmsWebp} type="image/webp" />
+                  <img src={ImageAlarms} width="80%" alt="" />
+                </picture>
               </ContentsWrapper>
             </Col>
           </Row>

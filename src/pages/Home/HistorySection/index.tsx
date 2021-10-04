@@ -6,6 +6,8 @@ import { withTranslation, WithTranslation } from 'react-i18next'
 
 import ImageHistory from '../../../assets/img/png/img_history.png'
 import ImageMoveLink from '../../../assets/img/png/img_move_link.png'
+import ImageHistoryWebp from '../../../assets/img/webp/img_history.webp'
+import ImageMoveLinkWebp from '../../../assets/img/webp/img_move_link.webp'
 import Container from '../../../baseLayout/Container'
 import MiddleBlock from '../../../components/MiddleBlock'
 import Contents from '../../../locales/ko/translation.json'
@@ -42,10 +44,16 @@ const HistorySection: React.FC<WithTranslation> = ({ t: translate }) => {
           <Col lg={11} md={11} sm={12} xs={24}>
             <ImageWrapper>
               <Reveal keyframes={moveLinkAnimation}>
-                <img src={ImageMoveLink} width="30%" alt="" />
+                <picture>
+                  <source srcSet={ImageMoveLinkWebp} type="image/webp" />
+                  <img src={ImageMoveLink} width="30%" alt="" loading="lazy" />
+                </picture>
               </Reveal>
               <Fade direction="right">
-                <img src={ImageHistory} width="100%" alt="" />
+                <picture>
+                  <source srcSet={ImageHistoryWebp} type="image/webp" />
+                  <img src={ImageHistory} width="100%" alt="" loading="lazy" />
+                </picture>
               </Fade>
             </ImageWrapper>
           </Col>

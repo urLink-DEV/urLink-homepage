@@ -1,6 +1,7 @@
 import { withTranslation, WithTranslation } from 'react-i18next'
 
 import ImageDesktop from '../../../assets/img/png/mockup_desktop.png'
+import ImageDesktopWebp from '../../../assets/img/webp/mockup_desktop.webp'
 import Container from '../../../baseLayout/Container'
 import { GetStartedLink } from '../../../components/GetStartedLink'
 import MiddleBlock from '../../../components/MiddleBlock'
@@ -19,7 +20,10 @@ const IntroSection: React.FC<WithTranslation> = ({ t: translate }) => {
             {translate(Contents.introSection.button)}
           </GetStartedLink>
         </ButtonWrapper>
-        <img src={ImageDesktop} width="100%" alt="" />
+        <picture>
+          <source srcSet={ImageDesktopWebp} type="image/webp" />
+          <img src={ImageDesktop} width="100%" alt="" />
+        </picture>
       </MiddleBlock>
     </Container>
   )

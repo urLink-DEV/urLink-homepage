@@ -5,6 +5,8 @@ import ImageButtons from '../../../assets/img/png/img_button_group.png'
 import ImageCards2 from '../../../assets/img/png/img_cards_2.png'
 import ImageCards3 from '../../../assets/img/png/img_cards_3.png'
 import ImageMobileCards from '../../../assets/img/png/img_m_cards.png'
+import ImageButtonsWebp from '../../../assets/img/webp/img_button_group.webp'
+import ImageCards3Webp from '../../../assets/img/webp/img_cards_3.webp'
 import Container from '../../../baseLayout/Container'
 import MiddleBlock from '../../../components/MiddleBlock'
 import Contents from '../../../locales/ko/translation.json'
@@ -37,8 +39,8 @@ const CardsSection: React.FC<WithTranslation> = ({ t: translate }) => {
             </Col>
             <Col lg={11} md={11} sm={11} xs={24}>
               <CardsImageWrapper>
-                <img src={ImageCards2} alt="" />
-                <img src={ImageMobileCards} alt="" />
+                <img src={ImageCards2} alt="" loading="lazy" />
+                <img src={ImageMobileCards} alt="" loading="lazy" />
               </CardsImageWrapper>
             </Col>
           </Row>
@@ -48,12 +50,18 @@ const CardsSection: React.FC<WithTranslation> = ({ t: translate }) => {
           <Row justify="space-between">
             <Col lg={13} md={13} sm={13} xs={24}>
               <ImageWrapper>
-                <img src={ImageCards3} alt="" />
+                <picture>
+                  <source srcSet={ImageCards3Webp} type="image/webp" />
+                  <img src={ImageCards3} alt="" loading="lazy" />
+                </picture>
               </ImageWrapper>
             </Col>
             <Col lg={10} md={10} sm={10} xs={24}>
               <ButtonImageWrapper>
-                <img src={ImageButtons} alt="" />
+                <picture>
+                  <source srcSet={ImageButtonsWebp} type="image/webp" />
+                  <img src={ImageButtons} alt="" loading="lazy" />
+                </picture>
               </ButtonImageWrapper>
               <SubTextWrapper>
                 <p>{translate(Contents.cardsSection.subText[0])}</p>
