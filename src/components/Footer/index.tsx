@@ -42,7 +42,7 @@ const Footer: React.FC<WithTranslation> = ({ t: translate }) => {
               >
                 {translate(Contents.footerSection.text[1])}
               </a>
-              <a onClick={handleClickMailTracking} href="mailto:admin@urlink-official.com">
+              <a onClick={handleClickMailTracking} href="mailto:urlinkofficial@gmail.com">
                 {translate(Contents.footerSection.text[2])}
               </a>
               <span>{translate(Contents.footerSection.text[0])}</span>
