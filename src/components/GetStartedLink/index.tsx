@@ -1,3 +1,5 @@
+import ReactGA from 'react-ga'
+
 import ImageLogo from '../../assets/img/png/logo28.png'
 import getLocalStorageItem from '../../utils/getLocalStorageItem'
 /* eslint-disable import/no-cycle */
@@ -21,11 +23,19 @@ export const GetStartedLink: React.FC<IProps> = ({
   children,
   logo,
 }) => {
+  const handleClickLinkTracking = () => {
+    ReactGA.event({
+      category: 'landing page',
+      action: 'go Urlink Chrome Extension',
+      label: 'GetStartedLink btn clicked',
+    })
+  }
   const selectedLanguage = getLocalStorageItem('i18nextLng')
   const URL = `https://chrome.google.com/webstore/detail/urlink/eimpopfllbjbhgkgomhhpolhlpaapdai?hl=${selectedLanguage}`
 
   return (
     <StyledLink
+      onClick={handleClickLinkTracking}
       size={size}
       color={color}
       backgroundColor={backgroundColor}

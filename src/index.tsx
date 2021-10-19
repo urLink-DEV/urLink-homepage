@@ -1,10 +1,14 @@
 import ReactDOM from 'react-dom'
+import ReactGA from 'react-ga'
 import { I18nextProvider } from 'react-i18next'
 import { BrowserRouter } from 'react-router-dom'
 import 'antd/dist/antd.css'
 
 import Router from './router'
 import i18n from './translation'
+
+ReactGA.initialize('UA-207149982-1')
+ReactGA.pageview(window.location.pathname + window.location.search)
 
 const App = () => (
   <BrowserRouter>

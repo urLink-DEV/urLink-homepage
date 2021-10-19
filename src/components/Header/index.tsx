@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { Row } from 'antd'
 import clsx from 'clsx'
 import i18n from 'i18next'
+import ReactGA from 'react-ga'
 import { withTranslation, WithTranslation } from 'react-i18next'
 
 import ImageLogo from '../../assets/img/png/logo_full.png'
@@ -29,6 +30,11 @@ const Header: React.FC<WithTranslation> = ({ t }) => {
   const handleChange = (language: Language) => {
     setCurrentLanguage(language)
     i18n.changeLanguage(language)
+    ReactGA.event({
+      category: 'landing page',
+      action: 'change language',
+      label: 'current language btn clicked',
+    })
   }
 
   useEffect(() => {

@@ -17,6 +17,7 @@ npm run start
 
 - TypeScript 적용
 - 검색엔진 최적화(SEO)
+- 구글 애널리틱스 적용(GA)
 - 다국어 지원을 위해 i18next 사용
 - react-awesome-reveal 라이브러리를 이용하여 스크롤 애니메이션 적용
 - 반응형 웹 지원
